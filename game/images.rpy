@@ -56,13 +56,29 @@ image avaricia_regular:
 image avaricia_mean:
     "avaricia_con_brillo" 
     resize(0.5)
-  
+
+
+layeredimage pereza:
+
+    group body:
+
+        attribute regular default:
+            "pereza_normal"
+
+        attribute tired:
+            "pereza_cansado"
+
+        attribute yawn:
+            "pereza_bostezo"
+
+    xoffset 350
+    yoffset -75 
 
 # ESCENARIOS
 
 image room:
     "bg room"
-    resize(1.43)
+    resize(1.46)
   
 image alley:
     "bg alley"
@@ -71,4 +87,8 @@ image alley:
 image bank:
     "bg bank"
     resize(1.40)   
+
+image tracks:
+    "bg tracks"
+    resize(0.55)   
          
