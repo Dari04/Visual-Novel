@@ -63,7 +63,9 @@ label start:
 
     pause(2)
 
-    jump perrito
+# Conectar nuevamente cuando Iteración 2 se realice
+#    jump perrito
+    jump avaricia
 
 
 label perrito:
@@ -120,7 +122,9 @@ label avaricia:
 
              "Le digo algo más antes de irme"
 
-             jump ratita
+# Conectar nuevamente cuando Iteración 2 se realice
+             #jump ratita
+             jump envidia
 
         "mmmm no, mejor no":
 
@@ -222,7 +226,9 @@ label ira:
 
             ir "Te digo un par de cosas más"
 
-            jump gatita
+ # Conectar nuevamente cuando Iteración 2 se realice
+            #jump gatita
+            jump lujuria
 
         "mmmm no, mejor no":
         
