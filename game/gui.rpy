@@ -105,7 +105,7 @@ define gui.textbox_yalign = 1.0
 ## Puede ser el númerode píxels desde la esquina superior izquierda, o 0.5 para
 ## centrar.
 define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_ypos = -80
 
 ## La alineación horizontal del nombre del personaje. (0.0 es izquierda, 0.5 es
 ## centro, 1.0 es derecha).
@@ -118,7 +118,7 @@ define gui.namebox_height = None
 
 ## Los bordes de la caja que contiene el nombre del personaje, en orden:
 ## izquierda, arriba, derecha, abajo.
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(40, 10, 40, 10)
 
 ## Si es 'True, el fondo de la caja del nombre será en mosaico, si es 'False',
 ## el fondo, si la caja del nombre es escalada.
