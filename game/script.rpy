@@ -34,7 +34,7 @@ label start:
 
     "Sin embargo, los he visto sonreír, llorar, dudar, amar y odiar… ¡Qué criaturas tan peculiares!"
 
-    "Pero entre todos los que he visto, sólo hay alguien que me importa: mi dueña."
+    "Pero entre todos los que he visto, solo hay alguien que me importa: mi dueña."
 
     show nena at center
     with dissolve
@@ -192,23 +192,47 @@ label pereza:
 
 # Escena 8 - Todo el contenido    
 
-    
-    "Acá hablo con Pereza"
+    scene tracks 
+    with dissolve
 
-    pz "tenemos una charla interesante, no?"
+    show pereza at right
+    with dissolve
+    
+    "D-Disculpe."
+
+    pz "Hmmm... ¿qué quieres?"
+
+    "Busco a alguien muy importante para mí, y… no se duerma por favor…"
+
+    pz "Aaah, te abandonó, ¿verdad? Jajajaja."
+
+    "¡Eso no es cierto! Me desperté dentro de este extraño mundo y no sé dónde podría estar ella, nos queremos mucho y sé que ella no me abandonaría así como  así."
+
+    show pereza yawn at right
+    with dissolve
+  
+    pz "No te canses buscándola, quédate conmigo y descansa… puedes verla en sueños si gustas... Zzzzz..."
+
+    show pereza at right
+    with dissolve
 
     menu:
 
-        "Sí, quiero seguir camino":
+        "Gracias, pero la seguiré buscando.":
+
+            show pereza tired at right
+            with dissolve
            
-            "Le digo algo más antes de irme"
+            "Si descanso ahora, tal vez no me despierte más y me encierre en un mundo de sueños…"
 
             jump gula
 
-        "mmmm no, mejor no":
+        "Solo dormiré un poco, no será malo.":
         
-        
-            $ ending_message = "Mensaje del personaje"
+            show pereza tired at right
+            with dissolve
+       
+            $ ending_message = "“Tus metas pueden esperar, dormir no hace daño a nadie”\nAtte: Pereza"
             jump finalabierto
 
 label gula:
