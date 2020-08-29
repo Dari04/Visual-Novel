@@ -25,13 +25,43 @@ label start:
 
     $ ending_message = "FIN"
 
+    play music "audio/acastromusic1.ogg" fadein 1 fadeout 2
+
     scene room 
+    with dissolve
 
     "Los humanos son criaturas extrañas, las veo caminar velozmente en la calle, con una prisa que desconozco.  Como si no tuvieran tiempo para disfrutar."
 
     "Sin embargo, los he visto sonreír, llorar, dudar, amar y odiar… ¡Qué criaturas tan peculiares!"
 
     "Pero entre todos los que he visto, sólo hay alguien que me importa: mi dueña."
+
+    show nena at center
+    with dissolve
+
+    "He estado con ella toda mi vida. Feliz de verme, feliz de verla."
+
+    "No me interesa descubrir qué hay más allá de las paredes de esta habitación, mientras ella permanezca aquí."
+
+    hide nena
+    with dissolve
+
+    pause(1)
+
+    "¿Cuánto tiempo dormí?... ¿Dónde está?"
+
+    "No está en su cama, ni en su escritorio haciendo tarea. Tampoco la encuentro buscando un lindo vestido que ponerse."
+
+    "¿A dónde has ido?"
+
+    pause(3)
+
+    "Debe estar con los otros humanos en el piso de abajo, iré a buscarla…"
+
+    scene black
+    with dissolve
+
+    pause(2)
 
     jump perrito
 
