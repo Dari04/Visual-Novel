@@ -13,7 +13,7 @@
 ##
 ## El _() que rodea la cadena de texto la señala como traducible.
 
-define config.name = _("WGJ2020Undecided")
+define config.name = _("¿Dónde estás?")
 
 
 ## Determina si el título dado más arriba se muestra en el menú principal.
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## Nombre breve del juego para ejecutables y directorios en la distribución.
 ## Debe contener solo carácteres ASCII, sin espacios, comas o puntos y coma.
 
-define build.name = "WGJ2020Undecided"
+define build.name = "WGJ2020DondeEstas"
 
 
 ## Sonidos y música ############################################################
@@ -143,7 +143,7 @@ default preferences.afm_time = 15
 ## Normalmente, este valor no debe ser modificado. Si lo es, debe ser siempre
 ## una cadena literal y no una expresión.
 
-define config.save_directory = "WGJ2020Undecided-1598227127"
+define config.save_directory = "WGJ2020-1598227127"
 
 
 ## Ícono #######################################################################
