@@ -32,4 +32,10 @@ transform resize(zoomindex=4):
     xalign 0.5
     yalign 1
 
+transform hovering:
+    alignaround (0.5, 0.5)
+    block:
+        linear 30 yalign 0.1 clockwise circles 3
+        repeat
+
 
