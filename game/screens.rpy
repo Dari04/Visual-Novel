@@ -564,7 +564,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Hecho con {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Hecho con {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]\n\nSonidos de Gula: \n bbrocer en FreeSound bajo CC0 1.0 Universal (CC0 1.0) Public Domain Dedication\n Ariel en su computadora bajo CC0 1.0 Universal (CC0 1.0) Public Domain Dedication \n\n")
 
 
 ## Esto se redefine en 'options.rpy' para añadir texto a la pantalla 'acerca
