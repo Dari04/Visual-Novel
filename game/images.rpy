@@ -85,6 +85,19 @@ layeredimage pereza:
     xoffset 350
     yoffset -75 
 
+layeredimage gula:
+
+    group option:
+
+        attribute regular default:
+            "gula_normal"
+            zoom 0.5
+
+        attribute mean:
+            "gula_enojado"
+            zoom 0.5
+    yoffset -100
+
 # ESCENARIOS
 
 image room:
@@ -94,6 +107,10 @@ image room:
 image alley:
     "bg alley"
     resize(3.4)   
+
+image garbage:
+    "bg garbage"
+    zoom 1.35
 
 image bank:
     "bg bank"
