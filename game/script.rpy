@@ -361,6 +361,20 @@ label finalabierto:
 
     "[ending_message]"
 
+    stop music fadeout 2.5
+
+    pause(1.5)
+ 
+    scene black
+    with dissolve
+
+    show text "FIN"
+    with dissolve
+    with Pause(1.5)
+
+    scene black
+    with dissolve
+
     return
 
 label finalvida:
