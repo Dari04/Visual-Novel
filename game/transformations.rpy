@@ -27,6 +27,9 @@ transform adjustedleft(zoomindex=0.5):
     xalign 0.25
     yalign 0.80
 
-transform adjustedbg:
-    zoom 4
+transform resize(zoomindex=4):
+    zoom zoomindex
+    xalign 0.5
+    yalign 1
+
 

@@ -25,7 +25,13 @@ label start:
 
     $ ending_message = "FIN"
 
-    "El juego empieza pero no sé dónde estoy"
+    scene room 
+
+    "Los humanos son criaturas extrañas, las veo caminar velozmente en la calle, con una prisa que desconozco.  Como si no tuvieran tiempo para disfrutar."
+
+    "Sin embargo, los he visto sonreír, llorar, dudar, amar y odiar… ¡Qué criaturas tan peculiares!"
+
+    "Pero entre todos los que he visto, sólo hay alguien que me importa: mi dueña."
 
     jump perrito
 
@@ -34,7 +40,7 @@ label perrito:
 
 # Escena 4 A - Diálogo inicial y toma de decisiones
 
-    scene bg alley at adjustedbg
+    scene alley
     with dissolve
 
     show perrito at adjustedleft

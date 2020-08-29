@@ -28,5 +28,11 @@ image glowing:
     "gatita_fondo"
     glow()
 
-    
+image room:
+    "bg room"
+    resize(1.44)
+  
+image alley:
+    "bg alley"
+    resize(3.4)    
          
