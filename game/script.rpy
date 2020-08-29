@@ -109,27 +109,48 @@ label sadperrito:
 label avaricia:
 
 # Escena 5 - Todo el contenido
+
+    scene bank 
+    with dissolve
+
+    show avaricia 
+    with dissolve
+
+    pause(2)
+
+    "¡Hola!, ¿puedo saber cómo consiguió ese collar?"
     
-    av "Acá me habla con Avaricia"
+    av "¿Y tú quién eres? ¿Te refieres a ésto? Acabo de comprarlo, ¿no crees que es bellísimo? JAJAJA-"
 
-    "charlamos un rato"
+    "Sí que es bonito, pero no era lo que buscaba, se parece al collar que usa alguien que aprecio mucho."
 
-    av "Qué opinás"
+    av "JAJAJA, el dinero lo es todo sin él no eres nada, solo mírate, si tuvieras dinero ella no te habría abandonado JAJAJAJA."
+
+    "¡¡¡NO ES CIERTO, ella no me abandonaría jamás porque me ama!!!"
+
+    av "Ríndete y disfrutemos de mis riquezas juntos. es una oferta que hago a menudo ¿sabes? Decídelo mientras aún puedas JAJAJAJA, conmigo a tu lado lo tendrás todo."
 
     menu:
 
-        "Sí, quiero seguir camino":
+        "Tal vez tengas razón, ME IRÉ CONTIGO.":
 
-             "Le digo algo más antes de irme"
+            show avaricia mean
+            
+            $ ending_message = "Soy la raíz de todos los problemas, jamás serás feliz."
+            jump finalabierto
+
+
+        "¡¡NO ME RENDIRÉ!!":
+
+            show avaricia mean
+
+            av "HAZ LO QUE QUIERAS NO ME IMPORTA, ¡¡¡NO HAY NADA MEJOR QUE LAS RIQUEZAS!! LAMENTARÁS NO HABER VENIDO CONMIGO."
+
+            "Perdone por las molestias, solo espero que algún día comprenda que las riquezas son pasajeras…"
 
 # Conectar nuevamente cuando Iteración 2 se realice
              #jump ratita
-             jump envidia
-
-        "mmmm no, mejor no":
-
-            $ ending_message = "Mensaje del personaje"
-            jump finalabierto
+            jump envidia
 
 label ratita:
 
