@@ -101,6 +101,8 @@ label sadperrito:
     pe sad "Buuuuuu"
     with dissolve
 
+    stop music fadeout 1
+
     hide perrito
     with dissolve
 
@@ -109,6 +111,8 @@ label sadperrito:
 label avaricia:
 
 # Escena 5 - Todo el contenido
+
+    play music "audio/acastromusic2.ogg" fadein 0.3 fadeout 0.15
 
     scene bank 
     with dissolve
@@ -167,25 +171,47 @@ label ratita:
 
 label envidia:
 
-# Escena 7 - Todo el contenido    
-    
-    "Acá hablo con Envidia"
+# Escena 7 - Todo el contenido   
 
-    en "Sí, charlamos un poco"
+    scene bg antiques 
+    with dissolve 
+
+    show envidia at right
+    with dissolve
+    
+    "¡Hola!, ¿podrías ayudarme? Estoy buscando a alguien sumamente importante para mí."
+
+    en "¿QUIÉN ERES TÚ? ¿Acaso sabes dónde te has metido?..."
+
+    "Realmente no sé qué lugar sea este, pero por ella puedo llegar a cualquier lugar… Haría lo que fuera por estar con ella otra vez."
+
+    en "¿Por qué preocuparse por alguien más? ¡Ella no te ama!  Si tanto lo hiciera nunca se hubiera ido."
+
+    "Tienes razón, ella me adora, y eso para mí es ir más allá del amor."
+
+    en "No lo entiendes, nunca nadie ha amado tanto a otro. Lo sé, yo esperé por un amor eterno, observando a la distancia a los enamorados,  a la gente que fingía sentir…"
+
+    en "Nadie puede amar tanto a nadie, entiéndelo de una vez… Pero yo te ofrezco mi compañía,  unidos hasta el fin de los tiempos, burlándonos de aquellos que  pretenden amar… DE CUALQUIER FORMA YA NO PUEDES REGRESAR…"
 
     menu:
 
-        "Pienso un rato y le respondo"
+        "¡NO! ¡SUENA HORRIBLE!":
 
-        "Sí, quiero seguir camino":
+            en "Como tú lo prefieras,  solo espero que nunca llegues a conseguir aquello que tanto deseas. Espero que desvíes tu camino y que te pierdas en él."
 
-            "Le digo algo más antes de irme"
+            show envidia mean
+            with dissolve
+
+            "Yo espero que puedas preocuparte por tí y no por los demás. Busca la paz en tí mismo y no odies a  aquellos con los que te encuentras." 
 
             jump pereza
 
-        "mmmm no, mejor no":
+        "¿SI ME QUEDO CONTIGO PODRÍA SER FELIZ?":
+
+            show envidia mean
+            with dissolve
         
-            $ ending_message = "Mensaje del personaje"
+            $ ending_message = "Alguien como yo, nunca permitiría que pudieras ser feliz."
             jump finalabierto
 
 label pereza:
