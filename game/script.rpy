@@ -4,8 +4,8 @@ define pe = Character("Un Perrito", image="perrito")
 define av = Character("Avaricia")
 define ra = Character("Una Ratita")
 define en = Character("Envidia")
-define pz = Character("Pereza")
-define gu = Character("Gula")
+define pz = Character("Pereza", image="pereza")
+define gu = Character("Gula", image="gula")
 define ir = Character("Ira")
 define ga = Character("Una Gatita")
 define lu = Character("Lujuria")
@@ -15,6 +15,32 @@ define ni = Character("La Niña")
 define na = Character("Narrador")
 
 
+init:
+    python:
+
+        ending_message = "FIN"
+
+        happy_music = "audio/acastromusic1.ogg"
+
+        dangerous_music = "audio/acastromusic2.ogg"
+
+        def play_music(song, fadein_value=0.3, fadeout_value=0.15):
+            if renpy.music.get_playing() is not None:
+                track = renpy.music.get_playing()
+                if track is not song:
+                    renpy.music.play(song, "music", fadein=fadein_value, fadeout=fadeout_value)
+
+        def play_eating_sounds():
+            renpy.music.set_volume(0.3, 0.5, channel='music')
+            renpy.music.play("audio/ariel_chewing.mp3", channel='sound')
+            renpy.music.queue("<from 17>audio/bbrocer_wet-sloppy-eating-2.mp3", channel='sound')
+            renpy.music.queue("<silence .3>", channel='sound')
+            renpy.music.queue("audio/ariel_chewing.mp3", channel='sound')
+            renpy.music.queue("audio/bbrocer_wet-sloppy-eating-2.mp3", channel='sound')
+
+        def stop_eating_sounds():
+            renpy.music.stop(channel='sound')
+            renpy.music.set_volume(1, 0.5, channel='music')
 
 # Game start
 
@@ -23,9 +49,7 @@ label start:
 # Las Escenas de 1 a 3 van acá
 # Todas transcurren en el cuarto de la niña y no hay toma de decisiones
 
-    $ ending_message = "FIN"
-
-    play music "audio/acastromusic1.ogg" fadein 1 fadeout 2
+    play music happy_music fadein 1 fadeout 2
 
     scene room 
     with dissolve
@@ -72,6 +96,8 @@ label perrito:
 
 # Escena 4 A - Diálogo inicial y toma de decisiones
 
+    $ play_music(happy_music, 1, 2)
+
     scene alley
     with dissolve
 
@@ -85,18 +111,20 @@ label perrito:
     
         "Sí, quiero seguir camino":
 
-            call sadperrito
+            call sadperrito from _call_sadperrito
             return 
 
         "mmmm no, mejor no":
 
-            call sadperrito
+            call sadperrito from _call_sadperrito_1
             return 
 
 
 label sadperrito:
 
 # Escena 4 B - Diálogo final
+
+    $ play_music(happy_music, 1, 2)
 
     pe sad "Buuuuuu"
     with dissolve
@@ -110,9 +138,9 @@ label sadperrito:
 
 label avaricia:
 
-# Escena 5 - Todo el contenido
+# Escena 5 - Todo el contenido 
 
-    play music "audio/acastromusic2.ogg" fadein 0.3 fadeout 0.15
+    $ play_music(dangerous_music)
 
     scene bank 
     with dissolve
@@ -159,6 +187,8 @@ label avaricia:
 label ratita:
 
 # Escena 6 - Todo el contenido - No hay decisión
+
+    $ play_music(dangerous_music)
     
     ra "Soy una ratita"
 
@@ -173,6 +203,8 @@ label envidia:
 
 # Escena 7 - Todo el contenido   
 
+    $ play_music(dangerous_music)
+    
     scene bg antiques 
     with dissolve 
 
@@ -218,6 +250,8 @@ label pereza:
 
 # Escena 8 - Todo el contenido    
 
+    $ play_music(dangerous_music)
+    
     scene tracks 
     with dissolve
 
@@ -237,7 +271,7 @@ label pereza:
     show pereza yawn at right
     with dissolve
   
-    pz "No te canses buscándola, quédate conmigo y descansa… puedes verla en sueños si gustas... Zzzzz..."
+    pz "No te canses buscándola, quédate conmigo y descansa… puedes verla en sueños si gustas… Zzzzz…"
 
     show pereza at right
     with dissolve
@@ -264,29 +298,60 @@ label pereza:
 label gula:
 
 # Escena 9 - Todo el contenido    
-    
-    gu "Acá hablás conmigo"
 
-    "Pienso un rato y le respondo"
+    $ play_music(dangerous_music)
+    
+    scene garbage 
+    with dissolve
+
+    show gula
+    with dissolve
+
+    $ play_eating_sounds()
+    
+    gu "Chomp, chomp {b}{i}*sonido grotesco al masticar*{/i}{/b} Hola pequeñín, ¿gustas un trozo de pollo? Es una delicia, jeejejeje."
+
+    "N-No gracias ugh…"
+
+    gu "Bueno, te lo pierdes, chomp, chomp, ¿y qué haces en un lugar como éste?… Chomp, chomp."
+
+    "Mmm, he estado buscando a mi dueña y no la encuentro por ningún lado…"
+
+    gu "¿¿Una amiga, eh??, Jejejeje, ¿al menos sabes que sitio es éste? Chomp, chomp… Qué bueno está ésto {b}{i}*tragar*{/i}{/b}."
+
+    "No, solo desperté aquí… he pasado por muchos sitios…"
+
+    gu "Eso explica mucho, chomp, chomp, de todas formas no la encontrarás jamás, te lo aseguro. Además estas tan flaco como un costal de huesos que das pena, chomp, chomp… "
+
+    "¿P-Por qué dice eso?… Yo sé que puedo encontrarla."
+
+    gu "Jajaja, tú no sabes nada, por eso lo dices, la falta de comida dañó tu pequeño cerebro, chomp, chomp… deja ya ese juego del pilla pilla y gocemos una vida con muchas golosinas jejeje. "
+
+    $ stop_eating_sounds()
+
+    show gula mean
+    with dissolve
 
     menu:
 
-        "Sí, quiero seguir camino":
+        "Mmm…"
 
-            gu "Me dice algo más"
+        "Está bien, a lo mejor ella está allí…": 
 
+        
+            $ ending_message = "Una vida sencilla es mejor a una con excesos…"
+            jump finalabierto
+
+        "Lo siento pero debo encontrarla.":
             jump ira
 
-        "mmmm no, mejor no":
-        
-        
-            $ ending_message = "Mensaje del personaje"
-            jump finalabierto
 
 label ira:
 
 # Escena 10 - Todo el contenido    
-    
+  
+    $ play_music(dangerous_music)
+      
     ir "yo soy mala onda"
 
     menu:
@@ -311,6 +376,8 @@ label gatita:
 
 # Escena 11 - Todo el contenido    
 
+    $ play_music(dangerous_music)
+    
     show gatita at adjustedleft(0.25)
     
     ga "Hola, yo soy una gatita"
@@ -321,11 +388,13 @@ label gatita:
 
     jump lujuria
 
+
 label lujuria:
 
 # Escena 12 - Todo el contenido    
 
-    
+    $ play_music(dangerous_music)
+        
     lu "Hola soy Lujuria"
 
     "ok, como anda todo che"
@@ -348,7 +417,10 @@ label lujuria:
 label soberbia:
 
 # Escena 13 - Todo el contenido   
-    
+ 
+
+    $ play_music(dangerous_music)
+       
     so "Soy Soberbia"
 
     "Ajá"
@@ -356,7 +428,6 @@ label soberbia:
     so "Soy la mejor, te quedás"
 
     menu:
-
 
         "No, quiero seguir camino":
 
@@ -372,6 +443,10 @@ label soberbia:
 label maloso:
 
 # Escena 14 - Todo el contenido  
+
+
+    $ play_music(dangerous_music)
+    
 
     fb "Soy el maloso final, tengamos una linda charla"
 
@@ -392,6 +467,9 @@ label encuentro:
 
  # Escena 15 - Todo el contenido   
  
+
+    $ play_music(happy_music)
+    
     ni "hola, llegaste"
 
     "parece" 
@@ -409,6 +487,8 @@ label encuentro:
 
 label finalabierto:
 
+    $ play_music(happy_music)
+    
     "[ending_message]"
 
     stop music fadeout 2.5
@@ -429,6 +509,8 @@ label finalabierto:
 
 label finalvida:
 
+    $ play_music(happy_music)
+    
     ni "charlamos un poco, pero te digo chau"
 
     "Vuelvo a la vida"
@@ -444,6 +526,8 @@ label finalmuerte:
     "Nos unimos en la muerte"
 
     return
+
+
 
 
 
