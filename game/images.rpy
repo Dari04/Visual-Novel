@@ -57,6 +57,17 @@ image avaricia_mean:
     "avaricia_con_brillo" 
     resize(0.5)
 
+layeredimage envidia:
+
+    group option:
+
+        attribute regular default:
+            "envidia_normal"
+            zoom 0.5
+
+        attribute mean:
+            "envidia_enojado"
+            zoom 0.5
 
 layeredimage pereza:
 
@@ -90,5 +101,5 @@ image bank:
 
 image tracks:
     "bg tracks"
-    resize(0.55)   
+    resize(0.55)    
          
