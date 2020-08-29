@@ -1,7 +1,7 @@
 # Transformations 
 transform glowfloat:
     parallel:
-        glow(2)
+        glow(0.5)
     parallel:
         xalign 0.0
         easein 1.3 xalign 0.03
@@ -13,7 +13,7 @@ transform glowfloat:
         easein 1.5 yalign 0.0
         repeat
 
-transform glow(offset):
+transform glow(offset=0):
     pause(offset)
     alpha 1.0
     easein 1.3 alpha 0.8
@@ -22,7 +22,7 @@ transform glow(offset):
     easeout 1.2 alpha  1.0
     repeat
         
-transform adjustedleft(zoomindex):
+transform adjustedleft(zoomindex=0.5):
     zoom zoomindex
     xalign 0.25
     yalign 0.80
