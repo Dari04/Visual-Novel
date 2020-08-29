@@ -26,7 +26,7 @@ image lantern:
 
 image glowing:
     "gatita_fondo"
-    glow(0)
+    glow()
 
     
          
