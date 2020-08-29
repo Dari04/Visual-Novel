@@ -2,7 +2,7 @@
 
 define pe = Character("Un Perrito", image="perrito")
 define av = Character("Avaricia")
-define rb = Character("Una Ratita")
+define ra = Character("Una Ratita")
 define en = Character("Envidia")
 define pz = Character("Pereza")
 define gu = Character("Gula")
@@ -10,13 +10,20 @@ define ir = Character("Ira")
 define ga = Character("Una Gatita")
 define lu = Character("Lujuria")
 define so = Character("Soberbia")
-define fb = Character("Un extraño")
+define fb = Character("????")
+define ni = Character("La Niña")
+define na = Character("Narrador")
+
+
 
 # Game start
 
 label start:
 
-    play music "audio/audioloco.mp3"
+# Las Escenas de 1 a 3 van acá
+# Todas transcurren en el cuarto de la niña y no hay toma de decisiones
+
+    $ ending_message = "FIN"
 
     "El juego empieza pero no sé dónde estoy"
 
@@ -25,214 +32,289 @@ label start:
 
 label perrito:
 
+# Escena 4 A - Diálogo inicial y toma de decisiones
+
     scene bg alley at adjustedbg
     with dissolve
 
     show perrito at adjustedleft
     with dissolve
 
-    pe "Hola soy el perrito"
+    pe "Hola soy el perrito, qué hacés"
 
-    pe "Acá te voy a estar contando algo"
 
-    "uuuu no tengo idea de qué se trata este juego" 
+    menu:
+    
+        "Sí, quiero seguir camino":
 
-    pe @ sad "Buuuuuu"
+            call sadperrito
+            return 
+
+        "mmmm no, mejor no":
+
+            call sadperrito
+            return 
+
+
+label sadperrito:
+
+# Escena 4 B - Diálogo final
+
+    pe sad "Buuuuuu"
     with dissolve
 
-    pe "Bueno, a ver decime, querés seguir?"
+    hide perrito
+    with dissolve
 
-    menu:
-    
-        "Sí, quiero seguir camino":
-
-            hide perrito
-            with dissolve
-
-            jump avaricia
-
-        "mmmm no, mejor no":
-
-            jump finalabierto
-
-
+    jump avaricia
 
 label avaricia:
+
+# Escena 5 - Todo el contenido
     
-    "Acá hablo con Avaricia"
+    av "Acá me habla con Avaricia"
+
+    "charlamos un rato"
+
+    av "Qué opinás"
 
     menu:
 
-        "Pienso un rato y le respondo"
-
         "Sí, quiero seguir camino":
 
-            jump ratita
+             "Le digo algo más antes de irme"
+
+             jump ratita
 
         "mmmm no, mejor no":
 
+            $ ending_message = "Mensaje del personaje"
             jump finalabierto
 
 label ratita:
+
+# Escena 6 - Todo el contenido - No hay decisión
     
-    "Acá hablo con una ratita"
+    ra "Soy una ratita"
 
-    menu:
+    "le hablo un poquito"
 
-        "Pienso un rato y le respondo"
+    ra "Te cuento algunas cosas"
 
-        "Sí, quiero seguir camino":
-
-            jump envidia
-
-        "mmmm no, mejor no":
-
-            jump finalabierto
+    jump envidia
 
 
 label envidia:
+
+# Escena 7 - Todo el contenido    
     
     "Acá hablo con Envidia"
+
+    en "Sí, charlamos un poco"
 
     menu:
 
         "Pienso un rato y le respondo"
 
         "Sí, quiero seguir camino":
+
+            "Le digo algo más antes de irme"
 
             jump pereza
 
         "mmmm no, mejor no":
         
+            $ ending_message = "Mensaje del personaje"
             jump finalabierto
 
 label pereza:
+
+# Escena 8 - Todo el contenido    
+
     
     "Acá hablo con Pereza"
 
+    pz "tenemos una charla interesante, no?"
+
     menu:
 
-        "Pienso un rato y le respondo"
-
         "Sí, quiero seguir camino":
+           
+            "Le digo algo más antes de irme"
 
             jump gula
 
         "mmmm no, mejor no":
         
+        
+            $ ending_message = "Mensaje del personaje"
             jump finalabierto
 
 label gula:
+
+# Escena 9 - Todo el contenido    
     
-    "Acá hablo con Gula"
+    gu "Acá hablás conmigo"
+
+    "Pienso un rato y le respondo"
 
     menu:
 
-        "Pienso un rato y le respondo"
-
         "Sí, quiero seguir camino":
+
+            gu "Me dice algo más"
 
             jump ira
 
         "mmmm no, mejor no":
         
+        
+            $ ending_message = "Mensaje del personaje"
             jump finalabierto
 
 label ira:
+
+# Escena 10 - Todo el contenido    
     
-    "Acá hablo con Ira"
+    ir "yo soy mala onda"
 
     menu:
 
         "Pienso un rato y le respondo"
 
         "Sí, quiero seguir camino":
+
+            ir "Te digo un par de cosas más"
 
             jump gatita
 
         "mmmm no, mejor no":
         
+        
+            $ ending_message = "Mensaje del personaje"
             jump finalabierto
 
 label gatita:
+
+# Escena 11 - Todo el contenido    
 
     show gatita at adjustedleft(0.25)
     
     ga "Hola, yo soy una gatita"
 
-    ga "Querés venir conmigo?"
+    "ok, me pareció"
 
-    menu:
+    ga "hablo un poco más"
 
-        "No, quiero seguir camino":
-
-            jump lujuria
-
-        "Bueno!":
-        
-            jump finalabierto
+    jump lujuria
 
 label lujuria:
+
+# Escena 12 - Todo el contenido    
+
     
-    "Acá hablo con Lujuria"
+    lu "Hola soy Lujuria"
+
+    "ok, como anda todo che"
 
     menu:
 
         "Pienso un rato y le respondo"
 
         "Sí, quiero seguir camino":
+
+            lu "Me dice más cosas"
 
             jump soberbia
 
         "mmmm no, mejor no":
         
+            $ ending_message = "Mensaje del personaje"
             jump finalabierto
 
 label soberbia:
+
+# Escena 13 - Todo el contenido   
     
-    "Acá hablo con Soberbia"
+    so "Soy Soberbia"
+
+    "Ajá"
+
+    so "Soy la mejor, te quedás"
 
     menu:
 
-        "Pienso un rato y le respondo"
 
-        "Sí, quiero seguir camino":
+        "No, quiero seguir camino":
+
+            so "siempre tengo razón"
 
             jump maloso
 
         "mmmm no, mejor no":
         
+            $ ending_message = "Mensaje del personaje"
             jump finalabierto
 
 label maloso:
 
-    "Acá hablo con el maloso final, me pregunta si quiero vivir solito"
+# Escena 14 - Todo el contenido  
+
+    fb "Soy el maloso final, tengamos una linda charla"
 
     menu:
 
         "No, quiero ver a la niña":
 
+            fb "ok ok prosiga"
+
+            jump encuentro
+
+        "Ma sí matame":
+        
+            $ ending_message = "Mensaje del personaje"
+            jump finalabierto
+
+label encuentro:
+
+ # Escena 15 - Todo el contenido   
+ 
+    ni "hola, llegaste"
+
+    "parece" 
+
+    menu:
+
+        "Quereme":
+
+            jump finalvida
+
+        "Te querré":
+          
             jump finalmuerte
 
-        "Sí, quiero volver a mi casita":
-        
-            jump finalvida
 
 label finalabierto:
 
-    "Me FUIIIIIII con este personaje"
-
-    return
-
-label finalmuerte:
-
-    "Nos unimos en la muerte"
+    "[ending_message]"
 
     return
 
 label finalvida:
 
+    ni "charlamos un poco, pero te digo chau"
+
     "Vuelvo a la vida"
+
+    na "esto es lo que aprendiste - FIN"
+
+    return
+
+label finalmuerte:
+
+    ni "charlamos un poco, y venís conmigo"
+
+    "Nos unimos en la muerte"
 
     return
 
