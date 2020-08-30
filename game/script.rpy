@@ -24,6 +24,8 @@ init:
 
         dangerous_music = "audio/acastromusic2.ogg"
 
+        chill_music = "audio/myrammusic1.mp3"
+
         def play_music(song, fadein_value=0.3, fadeout_value=0.15):
             if renpy.music.get_playing() is not None:
                 track = renpy.music.get_playing()
@@ -55,7 +57,16 @@ label start:
 # Las Escenas de 1 a 3 van acá
 # Todas transcurren en el cuarto de la niña y no hay toma de decisiones
 
+    stop music fadeout 2
+
+    scene black
+    with dissolve
+
+    pause(2)
+
     play music happy_music fadein 1 fadeout 2
+
+    pause(1)
 
     scene room
     with dissolve
@@ -93,8 +104,6 @@ label start:
 
     pause(2)
 
-# Conectar nuevamente cuando Iteración 2 se realice
-#    jump perrito
     jump perrito
 
 
@@ -102,7 +111,7 @@ label perrito:
 
 # Escena 4 A - Diálogo inicial y toma de decisiones
 
-    $ play_music(happy_music, 1, 2)
+    $ play_music(chill_music, 1, 5)
 
     scene parque
     with dissolve
@@ -112,22 +121,22 @@ label perrito:
 
     pe "¡Woof! No deberías estar aquí, tienes que irte."
 
-    "No puedo irme, no sé dónde está mi dueña y tengo que encontrarla."
+    "No puedo irme, no sé dónde está mi humana y tengo que encontrarla."
 
     show perrito sad
     with dissolve
 
-    pe "¿Tu dueña? Yo también tenía un dueño, pero se fue hace mucho, quería buscarlo, pero, me da miedo salir de aquí, waouh."
+    pe "¿Tu humana? Yo también tenía un humano, pero se fue hace mucho, quería buscarlo, pero, me da miedo salir de aquí, waouh."
 
     show perrito at center
     with dissolve
 
-    "Pero si quieres encontrar a tu dueña, debió irse por esa calle, es la única vía que hay. Pero ten cuidado, he escuchado que, en ese camino, puedes olvidar fácilmente quién eres."
+    "Pero si quieres encontrar a tu humana, debió irse por esa calle, es la única vía que hay. Pero ten cuidado, he escuchado que, en ese camino, puedes olvidar fácilmente quién eres."
 
 
     menu:
 
-        "Aunque tenga miedo, quiero encontrar a mi dueña.":
+        "Aunque tenga miedo, quiero encontrar a mi humana.":
 
             call sadperrito from _call_sadperrito
             return
@@ -142,9 +151,9 @@ label sadperrito:
 
 # Escena 4 B - Diálogo final
 
-    $ play_music(happy_music, 1, 2)
+    $ play_music(chill_music, 1, 5)
 
-    pe sad "Espero que encuentres a tu dueña, quisiera ser tan valiente como tú…"
+    pe sad "Espero que encuentres a tu humana, quisiera ser tan valiente como tú…"
     with dissolve
 
     stop music fadeout 1
@@ -153,6 +162,7 @@ label sadperrito:
     with dissolve
 
     jump avaricia
+
 
 label avaricia:
 
@@ -198,21 +208,49 @@ label avaricia:
 
             "Perdone por las molestias, solo espero que algún día comprenda que las riquezas son pasajeras…"
 
-# Conectar nuevamente cuando Iteración 2 se realice
-             #jump ratita
-            jump envidia
+            jump ratita
 
 label ratita:
 
 # Escena 6 - Todo el contenido - No hay decisión
 
-    $ play_music(dangerous_music)
+    $ play_music(chill_music, 1, 5)
 
-    ra "Soy una ratita"
+    scene subte
+    with dissolve
 
-    "le hablo un poquito"
+    show ratita 
+    with dissolve
 
-    ra "Te cuento algunas cosas"
+    show ratita crazy_pet
+
+    ra "Qué criatura tan curiosa eres, me recuerdas a otros que conocí, pero ¿dónde estarán ahora?"
+
+    "¿Te encuentras bien? Te ves algo… raro."
+
+    ra "¡Estoy de maravilla!, como si hubiera comido queso cheddar."
+
+    show ratita crazy_mystic
+
+    ra "¿Y tú? Buscas algo, ¿verdad?"
+
+    "Busco a mi humana, pensé que estaba cerca porque creí ver su collar, pero me equivoqué. Nadie la ha visto."
+
+    show ratita crazy_pet
+
+    ra "Será mejor que sigas adelante, muchos han encontrado lo que querían en este camino, pero, otros se han dado cuenta que no querían eso."
+
+    show ratita crazy_mystic
+
+    ra "Tal vez tu humana busca estar lejos de ti."
+
+    show ratita dead
+
+    "¡Imposible! Ella no haría algo así."
+
+    ra "Si tú lo dices, pero muchos han cambiado al llegar aquí."
+
+    ra "Te deseo éxito en tu búsqueda, ya que, entre más avances, más tendrás que sacrificar."
 
     jump envidia
 
@@ -414,7 +452,7 @@ label gatita:
 
 # Escena 11 - Todo el contenido
 
-    $ play_music(dangerous_music)
+    $ play_music(chill_music, 1, 5)
 
     show gatita at adjustedleft(0.25)
 

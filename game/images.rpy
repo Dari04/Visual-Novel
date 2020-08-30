@@ -213,6 +213,7 @@ layeredimage lujuria:
             zoom 0.45
 
     yoffset -30
+    xoffset 290
 
 layeredimage lujuria_happy:
     always:
@@ -251,6 +252,79 @@ layeredimage ira:
             "ira_dos"
             zoom 0.5
     yoffset 100
+
+
+layeredimage rata_mistica:
+
+    always:         
+        "aura"
+        yoffset -250
+
+    always:
+        "rata_base"
+
+    always:
+        "rata_fosforo"
+
+    always:
+        "blaze"
+
+
+layeredimage ratita:
+
+    group option:
+
+        attribute regular default:
+            "rata_mascota_flip"
+            zoom 0.3
+
+        attribute crazy_mystic:
+            "rata_mistica_loca"
+            zoom 0.3
+
+        attribute crazy_pet:
+            "rata_mascota_loca"
+            zoom 0.3
+
+        attribute dead:
+            "rata_mistica"
+            zoom 0.3
+    yoffset -150
+
+layeredimage rata_mistica_loca:
+    always:
+        "rata_mistica_loca_gana"
+    always:
+        "rata_mascota_loca_pierde"
+
+layeredimage rata_mascota_loca:
+    always:
+        "rata_mistica_loca_pierde"
+    always:
+        "rata_mascota_loca_gana"
+
+image rata_mascota_flip:
+    im.Flip("rata_mascota.png", horizontal=True)
+    xoffset -130
+
+image rata_mascota_loca_gana:
+    "rata_mascota_flip"   
+    flicker()
+    
+image rata_mistica_loca_pierde:
+    "rata_mistica"
+    flicker(0.2)
+    alpha 0
+
+image rata_mascota_loca_pierde:
+    "rata_mascota_flip"   
+    flicker()
+    alpha 0
+    
+image rata_mistica_loca_gana:
+    "rata_mistica"
+    flicker(0.2)
+
 
 # ITEMS
 
@@ -316,6 +390,15 @@ image sparkles:
     "humana_fuego_chispas"
     glowfloat()
 
+image blaze:
+    "rata_fuego"
+    glowfloat()
+
+image aura:
+    "rata_aura"
+    glow()
+
+
 # ESCENARIOS
 
 layeredimage room:
@@ -364,3 +447,8 @@ image parque:
     "bg park"
     yalign 0.2
    
+image subte:
+    "bg subway"
+    zoom 1.35
+    yoffset 200
+

@@ -31,15 +31,15 @@ define config.version = "0.6"
 ## comillas triples y deja una línea en blanco entre párrafos.
 
 define gui.full_credits = _p("""
-Juego realizado para Women Game Jam 2020
+{b}Juego realizado para Women Game Jam 2020{/b}
 
-"Juntas a la distancia"
-
-
-Project Manager: Viviana Jerónimo  “Insecta”
+{b}{i}"Juntas a la distancia"{/i}{/b}
 
 
-Arte y Diseño:
+{b}Project Manager:{/b} Viviana Jerónimo  “Insecta”
+
+
+{b}Arte y Diseño:{/b}
 
 Rocío Mikulic
 
@@ -52,16 +52,16 @@ Elizabeth Rodríguez
 Viviana Jerónimo  “Insecta”
 
 
-Storytelling:
+{b}Storytelling:{/b}
 
 Berenice Prieto “JasChido” 
 
-Vanessa Flores “ Vavin”
+Vanessa Flores “Vavin”
 
 Viviana Jerónimo  “Insecta”
 
 
-Tejedoras de Código:
+{b}Tejedoras de Código:{/b}
 
 May Craviotto 
 
@@ -72,14 +72,14 @@ Dari Patiño
 @Alison
 
 
-Ambientación musical:
+{b}Ambientación musical:{/b}
 
 Ángel Castro  
 
 Sascha Ram  
 
 
-Efectos de sonidos 
+{b}Efectos de sonidos:{/b}
 
 bbrocer (en FreeSound bajo CC0 1.0 Universal (CC0 1.0) Public Domain Dedication)
 
@@ -87,12 +87,13 @@ Ariel
 """)
 
 define gui.basic_credits = _p("""
-Juego realizado para Women Game Jam 2020
+{b}Juego realizado para Women Game Jam 2020{/b}
 
-"Juntas a la distancia"
+{b}{i}"Juntas a la distancia"{/i}{/b}
 
 
-Efectos de sonidos 
+
+{b}Efectos de sonidos:{/b}
 
 bbrocer (en FreeSound bajo CC0 1.0 Universal (CC0 1.0) Public Domain Dedication)
 
@@ -135,7 +136,7 @@ define config.has_voice = False
 ## el menú principal. Este archivo seguirá sonando en el juego hasta que sea
 ## detenido o se reproduzca otro archivo.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/myrammusic1.mp3"
 
 
 ## Transiciones ################################################################

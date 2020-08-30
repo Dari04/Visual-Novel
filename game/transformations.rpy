@@ -13,6 +13,20 @@ transform glowfloat:
         easein 1.5 yalign 0.0
         repeat
 
+
+transform flicker(offset=0):
+    pause(offset)
+    alpha 1
+    linear 0.2 alpha 0.0
+    linear 0.2 alpha 0.8
+    linear 0.2 alpha 0.0
+    linear 0.2 alpha 0.5
+    linear 0.2 alpha 0.0
+    linear 0.2 alpha 0.7
+    linear 0.2 alpha 0.0
+    alpha 1
+
+
 transform glow(offset=0):
     pause(offset)
     alpha 1.0
