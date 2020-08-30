@@ -86,7 +86,7 @@ label start:
 
     pause(3)
 
-    "Debe estar con los otros humanos en el piso de abajo, iré a buscarla…"
+    "Debe estar con los otros humanos en el piso de abajo, o afuera, iré a buscarla…"
 
     scene black
     with dissolve
@@ -104,7 +104,7 @@ label perrito:
 
     $ play_music(happy_music, 1, 2)
 
-    scene ciudad
+    scene parque
     with dissolve
 
     show perrito at center

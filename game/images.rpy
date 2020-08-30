@@ -33,7 +33,8 @@ layeredimage perrito:
             "perrito_sad"
             zoom 0.3
 
-    yoffset -40
+    yoffset -230
+    xoffset 50
 
 image nena:
     "nena_en_cuarto"
@@ -358,3 +359,8 @@ image callejon:
 image ciudad:
     "bg ciudad"
     resize(1.9)
+
+image parque:
+    "bg park"
+    yalign 0.2
+   
