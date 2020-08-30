@@ -349,6 +349,8 @@ label gula:
 label ira:
 
 # Escena 10 - Todo el contenido    
+
+    scene black
   
     $ play_music(dangerous_music)
       
@@ -454,15 +456,24 @@ label maloso:
     with dissolve
 
     fb "AL FIN HAS LLEGADO, ME HE CANSADO DEMASIADO DE ESPERAR POR TI."
-    na "Después de todo lo que acabo de ver, solo quisiera descansar. Mi alma  ya no aguanta y mi corazón está roto. Ya no quiero ver a nadie más, excepto a ella."
+    
+    "Después de todo lo que acabo de ver, solo quisiera descansar. Mi alma  ya no aguanta y mi corazón está roto. Ya no quiero ver a nadie más, excepto a ella."
+    
     fb "ADMIRO TODO LO QUE HAS HECHO HASTA AHORA, PERO TEMO DECIRTE QUE TODOS AQUELLOS QUE APARECEN EN ESTE MUNDO ESTÁN CONDENADOS AL DOLOR Y SUFRIMIENTO ETERNO."
+    
     fb "ESTÁS EN UN PUNTO DE NO RETORNO. NUNCA MÁS LA VERÁS. NUNCA MÁS VERÁS LA LUZ DEL SOL. Y SOBRE TODO, ESTÁS CONDENADO A VAGAR PARA SIEMPRE EN ESTE LUGAR."
-    na "¿Tú me dirás que es este lugar? Tengo miedo, quiero volver, pero también quiero verla, quiero verla una última vez antes de sufrir para siempre..."
+    
+    "¿Tú me dirás que es este lugar? Tengo miedo, quiero volver, pero también quiero verla, quiero verla una última vez antes de sufrir para siempre..."
+    
     fb "ESTE ES UN LUGAR AL QUE TÚ NO PERTENECES. AQUÍ SOLO VIENEN AQUELLOS QUE SUFRIERON DEMASIADO ESTANDO VIVOS."
+    
     fb "TODO EL DOLOR DE LA EXISTENCIA HUMANA SE MANTIENE EN ESTE LUGAR."
+    
     fb "PERO YO PUEDO CALMAR TU DOLOR. PODRÍA TERMINAR CON TU VIDA EN ESTE INSTANTE Y ENVIARTE AL  UNIVERSO QUE MERECES. DE CUALQUIER  FORMA, VERLA YA NO ES UNA OPCIÓN."
+    
     fb "EL DOLOR  QUE TUVO EN SUS ÚLTIMOS INSTANTES FUE SUFICIENTE PARA QUE ELLA APARECIERA AQUÍ. DE CUALQUIER MODO, ES IMPOSIBLE QUE VUELVAN A ENCONTRARSE."
-    na "Ha sido un largo viaje, sólo quisiera verla pero..."
+    
+    "Ha sido un largo viaje, sólo quisiera verla pero..."
     
     menu:
 
