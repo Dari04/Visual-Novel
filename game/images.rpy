@@ -90,7 +90,7 @@ layeredimage gula:
     yoffset -100
 
 
-layeredimage final_boss:
+layeredimage finalBoss:
 
     group option:
 
