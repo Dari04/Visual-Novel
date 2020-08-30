@@ -42,6 +42,12 @@ init:
             renpy.music.stop(channel='sound')
             renpy.music.set_volume(1, 0.5, channel='music')
 
+        def save_finished(ending):
+            persistent.ending = ending
+            renpy.save_persistent()
+
+
+
 # Game start
 
 label start:
@@ -651,6 +657,8 @@ label finalvida:
     scene black
     with dissolve
 
+    $ save_finished("live")
+
     jump credits
 
 label finalmuerte:
@@ -686,6 +694,8 @@ label finalmuerte:
  
     scene black
     with dissolve
+
+    $ save_finished("death")
 
     jump credits
 
