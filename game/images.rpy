@@ -18,12 +18,11 @@ layeredimage gatita:
         attribute moving default:
             "lantern"
 
-
         attribute stopped:
             "gatita_brillo"
 
 image nena:
-    "nena_en_cuarto" 
+    "nena_en_cuarto"
     resize(0.4)
 
 
@@ -39,14 +38,14 @@ layeredimage avaricia:
 
 
 image avaricia_regular:
-    "avaricia_base" 
+    "avaricia_base"
     xoffset 100
     yoffset 50
     resize(0.5)
     hovering()
 
 image avaricia_mean:
-    "avaricia_con_brillo" 
+    "avaricia_con_brillo"
     resize(0.5)
 
 layeredimage envidia:
@@ -75,7 +74,7 @@ layeredimage pereza:
             "pereza_bostezo"
 
     xoffset 350
-    yoffset -75 
+    yoffset -75
 
 layeredimage gula:
 
@@ -102,8 +101,6 @@ layeredimage finalBoss:
         attribute mean:
             "fb_inicial"
             zoom 0.5
-
-    #yoffset -100
 
 image fb_regular:
     "fb_final" 
@@ -148,7 +145,55 @@ layeredimage humana_espiritu:
 
     yoffset -100
 
-#items
+layeredimage lujuria:
+
+    #group background:
+
+        #attribute glow default:
+            #"lujuria_contenta_humo"
+
+        #attribute light:
+            #"lujuria_enojada_humo"
+
+    group option:
+
+        attribute regular default:
+            "lujuria_feliz"
+            zoom 0.45
+
+        attribute mean:
+            "lujuria_enojada"
+            zoom 0.45
+
+    yoffset -30
+
+layeredimage soberbia:
+
+    group option:
+
+        attribute regular default:
+            "soberbia_uno"
+            zoom 0.9
+
+        attribute mean:
+            "soberbia_dos"
+            zoom 0.9
+    xoffset 200
+
+
+layeredimage ira:
+    group option:
+
+        attribute regular default:
+            "ira_uno"
+            zoom 0.5
+
+        attribute mean:
+            "ira_dos"
+            zoom 0.5
+    yoffset 100
+
+# ITEMS
 
 image floating_necklace:
     "collar_item"
@@ -195,6 +240,7 @@ image glowing:
     glow()
 
 
+
 # ESCENARIOS
 
 layeredimage room:
@@ -212,7 +258,7 @@ layeredimage room:
   
 image alley:
     "bg alley"
-    resize(3.4)   
+    resize(3.4)
 
 image garbage:
     "bg garbage"
@@ -220,7 +266,7 @@ image garbage:
 
 image bank:
     "bg bank"
-    resize(1.40)   
+    resize(1.40)
 
 image tracks:
     "bg tracks"
@@ -229,4 +275,17 @@ image tracks:
 image hell:
     "bg finalboss"
     resize(1.60)
-         
+
+image tunel:
+    "bg tunel"
+    resize(1.40)
+
+image callejon:
+    "bg callejon"
+    yalign 0.5
+    zoom 2.7
+
+image ciudad:
+    "bg ciudad"
+    resize(1.9)
+
