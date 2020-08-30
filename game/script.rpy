@@ -10,7 +10,7 @@ define ir = Character("Ira", image="ira")
 define ga = Character("Una Gatita")
 define lu = Character("Lujuria")
 define so = Character("Soberbia")
-define fb = Character("????", image="finalBoss")
+define fb = Character("????")
 define ni = Character("La Niña")
 define na = Character("Narrador")
 
@@ -512,7 +512,7 @@ label maloso:
     scene hell
     with dissolve
     
-    show final_boss
+    show finalBoss mean
     with dissolve
 
     fb "AL FIN HAS LLEGADO, ME HE CANSADO DEMASIADO DE ESPERAR POR TI."
@@ -538,6 +538,9 @@ label maloso:
     menu:
 
         "SI MORIR ES LA ÚNICA OPCIÓN  PARA YA NO SUFRIR, ENTONCES TERMINA CONMIGO.":
+
+            show finalBoss regular
+            with dissolve
 
             fb "ME AGRADA TANTO TU HONESTIDAD Y TU DOLOR,  AL FIN TE HAS RENDIDO. ASÍ QUE TE PERMITIRÉ CUMPLIR CON TU PROPÓSITO Y DE ESTA FORMA,  NO SERÉ YO QUIEN TERMINE CON TU VIDA…"
 
