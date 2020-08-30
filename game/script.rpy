@@ -614,6 +614,8 @@ label encuentro:
 
 label finalvida:
 
+# Final 1 - "Juntas a la distancia"
+
     $ play_music(happy_music)
 
     show humana_espiritu necklace
@@ -662,6 +664,8 @@ label finalvida:
     jump credits
 
 label finalmuerte:
+
+# Final 2 - "Juntos en la muerte"
 
     $ play_music(happy_music)
 
@@ -712,6 +716,8 @@ label credits:
 
 
 label finalabierto:
+
+# GAME OVER, no se considera final, el usuario no ve créditos
 
     $ play_music(dangerous_music)
     
