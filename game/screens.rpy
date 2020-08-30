@@ -367,7 +367,15 @@ screen main_menu():
 
     ## La sentencia 'use' incluye otra pantalla dentro de esta. El contenido
     ## real del menú principal está en la pantalla de navegación.
-    use navigation
+    #use navigation
+
+    imagebutton idle "1.png" hover "1-hover.png" xpos 130 ypos 50 focus_mask None action Start() 
+    imagebutton idle "2.png" hover "2-hover.png" xpos 130 ypos 200 focus_mask None action ShowMenu("load")
+    imagebutton idle "3.png" hover "3-hover.png" xpos 117 ypos 350 focus_mask None action ShowMenu("preferences")
+    imagebutton idle "4.png" hover "4-hover.png" xpos 107 ypos 500 focus_mask None action ShowMenu("about")
+    imagebutton idle "5.png" hover "5-hover.png" xpos 130 ypos 650 focus_mask None action ShowMenu("help")
+    imagebutton idle "6.png" hover "6-hover.png" xpos 130 ypos 800 focus_mask None action Quit(confirm=not main_menu)
+
 
     if gui.show_name:
 
