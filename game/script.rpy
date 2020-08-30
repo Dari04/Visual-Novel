@@ -11,7 +11,7 @@ define ga = Character("Una Gatita")
 define lu = Character("Lujuria")
 define so = Character("Soberbia")
 define fb = Character("????")
-define ni = Character("La Niña")
+define ni = Character("Ori")
 define na = Character("Narrador")
 
 
