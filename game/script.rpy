@@ -86,7 +86,7 @@ label start:
 
     pause(3)
 
-    "Debe estar con los otros humanos en el piso de abajo, iré a buscarla…"
+    "Debe estar con los otros humanos en el piso de abajo, o afuera, iré a buscarla…"
 
     scene black
     with dissolve
@@ -95,7 +95,7 @@ label start:
 
 # Conectar nuevamente cuando Iteración 2 se realice
 #    jump perrito
-    jump avaricia
+    jump perrito
 
 
 label perrito:
@@ -104,23 +104,35 @@ label perrito:
 
     $ play_music(happy_music, 1, 2)
 
-    scene alley
+    scene parque
     with dissolve
 
-    show perrito at adjustedleft
+    show perrito at center
     with dissolve
 
-    pe "Hola soy el perrito, qué hacés"
+    pe "¡Woof! No deberías estar aquí, tienes que irte."
+
+    "No puedo irme, no sé dónde está mi dueña y tengo que encontrarla."
+
+    show perrito sad
+    with dissolve
+
+    pe "¿Tu dueña? Yo también tenía un dueño, pero se fue hace mucho, quería buscarlo, pero, me da miedo salir de aquí, waouh."
+
+    show perrito at center
+    with dissolve
+
+    "Pero si quieres encontrar a tu dueña, debió irse por esa calle, es la única vía que hay. Pero ten cuidado, he escuchado que, en ese camino, puedes olvidar fácilmente quién eres."
 
 
     menu:
 
-        "Sí, quiero seguir camino":
+        "Aunque tenga miedo, quiero encontrar a mi dueña.":
 
             call sadperrito from _call_sadperrito
             return
 
-        "mmmm no, mejor no":
+        "No le tengo miedo a unos rumores tontos, seguiré adelante.":
 
             call sadperrito from _call_sadperrito_1
             return
@@ -132,7 +144,7 @@ label sadperrito:
 
     $ play_music(happy_music, 1, 2)
 
-    pe sad "Buuuuuu"
+    pe sad "Espero que encuentres a tu dueña, quisiera ser tan valiente como tú…"
     with dissolve
 
     stop music fadeout 1
@@ -494,7 +506,7 @@ label soberbia:
 
        "Si es verdad lo que dices, entonces, me quedaré contigo.":
 
-            show soberbia 
+            show soberbia
             with dissolve
 
             $ ending_message = "La soberbia somete a la naturaleza a su voluntad"
@@ -553,7 +565,7 @@ label maloso:
             jump encuentro
 
         "¿LA CONOCES? NECESITO VERLA, POR ÚLTIMA VEZ.":
-        
+
             $ ending_message = "DEBES APRENDER A VIVIR POR TI Y NO POR ALGUIEN.  EXTRAÑAR A ALGUIEN QUE AMAS, SOLO TE ARRASTRA AL DOLOR."
             jump finalabierto
 
@@ -602,7 +614,7 @@ label encuentro:
         "ÁMAME PARA SIEMPRE,  JUSTO COMO YO LO HAGO":
 
             hide humana_triste
-   
+
             show humana_muerta
             with dissolve
 
@@ -622,7 +634,7 @@ label finalvida:
     with dissolve
 
     hide humana_muerta
-    
+
     ni "LO HARÉ, JAMÁS DEJARÉ DE AMARTE… PROMETE QUE VIVIRÁS Y SERÁS FELIZ A PESAR DE TODO…"
 
     "YO… LO PROMETO,  aunque no sé si tenga las fuerzas suficientes para hacerlo…"
@@ -644,6 +656,7 @@ label finalvida:
     with dissolve
 
     show glowing_necklace at resize(0.5) 
+
     with dissolve
 
     "Ese día aprendí que aunque no la vuelva a ver jamás... ella siempre vivirá en mi corazón y con este collar, ella estará conmigo siempre que me sienta solo…"

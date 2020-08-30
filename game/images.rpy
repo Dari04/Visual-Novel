@@ -21,6 +21,21 @@ layeredimage gatita:
         attribute stopped:
             "gatita_brillo"
 
+layeredimage perrito:
+
+    group option:
+
+        attribute regular default:
+            "perrito_feliz"
+            zoom 0.3
+
+        attribute sad:
+            "perrito_sad"
+            zoom 0.3
+
+    yoffset -230
+    xoffset 50
+
 image nena:
     "nena_en_cuarto"
     resize(0.4)
@@ -114,7 +129,6 @@ image fb_mean:
     yoffset 50
     resize(0.5)  
 
-
 layeredimage humana_espiritu:
 
     always:         
@@ -144,7 +158,6 @@ layeredimage humana_espiritu:
             "floating_necklace"
             yoffset 560
             xoffset 220
-
 
     yoffset -100
 
@@ -201,20 +214,17 @@ layeredimage lujuria:
 
     yoffset -30
 
-
 layeredimage lujuria_happy:
     always:
         "glowing_smoke_purple"
     always:
         im.Flip("lujuria_feliz.png", horizontal=True)
 
-
 layeredimage lujuria_mad:
     always:
         "glowing_smoke_pink"
     always:
         im.Flip("lujuria_enojada.png", horizontal=True)
-    
 
 layeredimage soberbia:
 
@@ -320,10 +330,6 @@ layeredimage room:
             zoom 1.46
     xalign 0.5
     yalign 1
-  
-image alley:
-    "bg alley"
-    resize(3.4)
 
 image garbage:
     "bg garbage"
@@ -354,3 +360,7 @@ image ciudad:
     "bg ciudad"
     resize(1.9)
 
+image parque:
+    "bg park"
+    yalign 0.2
+   
