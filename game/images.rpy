@@ -457,3 +457,7 @@ image carrusel:
     resize(1.5)
 
 
+image credits:
+    "bg credits"
+    zoom 1.50
+

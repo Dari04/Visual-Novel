@@ -26,6 +26,71 @@ init:
 
         chill_music = "audio/myrammusic1.mp3"
 
+        credits_message_1 = _p("""
+
+{b}Gracias por jugar{/b}
+
+{b}Project Manager:{/b} Viviana Jerónimo  “Insecta”
+
+
+{b}Arte y Diseño:{/b}
+
+Rocío Mikulic
+
+Karina Fonseca “Hedoneex”  
+
+Sol Savoretti 
+
+Elizabeth Rodríguez 
+
+Viviana Jerónimo  “Insecta”
+
+""")
+
+        credits_message_2 = _p("""
+
+{b}Storytelling:{/b}
+
+Berenice Prieto “JasChido” 
+
+Vanessa Flores “Vavin”
+
+Viviana Jerónimo  “Insecta”
+
+""")
+
+        credits_message_3 = _p("""
+
+{b}Tejedoras de Código:{/b}
+
+May Craviotto 
+
+Marina "Eariel" Cuello 
+
+Dari Patiño
+
+@Alison
+
+
+""")
+
+
+        credits_message_4 = _p("""
+
+{b}Ambientación musical:{/b}
+
+Ángel Castro  
+
+Sascha Ram  
+
+
+{b}Efectos de sonidos:{/b}
+
+bbrocer (en FreeSound bajo CC0 1.0 Universal (CC0 1.0) Public Domain Dedication)
+
+Ariel
+""")
+
         def play_music(song, fadein_value=0.3, fadeout_value=0.15):
             if renpy.music.get_playing() is not None:
                 track = renpy.music.get_playing()
@@ -717,14 +782,14 @@ label finalvida:
 
     "Los años pasaron y como lo había prometido continué mi vida, disfrutando cada momento, superando cada obstáculo,  sabía que ella estaría siempre ahí, para mí."
 
+    $ save_finished("death")
+
     window hide
 
     stop music fadeout 2.5
 
     pause(3)
 
-    $ save_finished("death")
- 
     scene black
     with dissolve
 
@@ -757,13 +822,13 @@ label finalmuerte:
 
     ni "Es momento de irnos, hay que seguir adelante."
 
+    $ save_finished("death")
+
     window hide
 
     stop music fadeout 2.5
 
     pause(3)
-
-    $ save_finished("death")
  
     scene black
     with dissolve
@@ -772,9 +837,30 @@ label finalmuerte:
 
 label credits:
 
-    show text "Ya puedes ver los créditos en “Acerca de“"
+    scene credits
+    with dissolve
 
-    pause(4)
+    $ renpy.music.set_volume(0.2, 0.5, channel='music')
+
+    show text  "{color=#02fefc}[credits_message_1]{/color}"
+
+    pause(3)
+
+    show text  "{color=#02fefc}[credits_message_2]{/color}"
+
+    pause(3)
+
+    show text  "{color=#02fefc}[credits_message_3]{/color}"
+
+    pause(3)
+
+    show text  "{color=#02fefc}[credits_message_4]{/color}"
+
+    pause(3)
+
+    $ renpy.music.set_volume(0.2, 0.5, channel='music')
+
+    $ _skipping = True
 
     scene black
     with dissolve
