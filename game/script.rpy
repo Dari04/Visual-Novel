@@ -512,7 +512,7 @@ label maloso:
     scene hell
     with dissolve
     
-    show finalBoss
+    show final_boss
     with dissolve
 
     fb "AL FIN HAS LLEGADO, ME HE CANSADO DEMASIADO DE ESPERAR POR TI."
@@ -552,56 +552,62 @@ label encuentro:
 
  # Escena 15 - Todo el contenido
 
-
-    $ play_music(happy_music)
-
-    ni "hola, llegaste"
-
-    "parece"
-
-    menu:
-
-        "Quereme":
-
-            jump finalvida
-
-        "Te querré":
-
-            jump finalmuerte
-
-
-label finalabierto:
-
-    $ play_music(dangerous_music)
-    
-    $ play_music(happy_music)
-
-    "[ending_message]"
-
-    stop music fadeout 2.5
-
-    pause(1.5)
-
-    scene black
-    with dissolve
-
-    show text "FIN"
-    with dissolve
-    with Pause(1.5)
-
-    scene black
-    with dissolve
-
-    return
-
-label finalvida:
-
     $ play_music(happy_music)
 
     scene room gloom
     with dissolve
 
-    show humana_espiritu necklace 
+    show humana_muerta
+    with dissolve
+
+    ni "¿Mi habitación? Parece que han pasado siglos desde la última vez que estuve aquí. En aquel lugar había edificios gigantes."
+
+    ni "Calles que resultaban interminables… Aromas nauseabundos, y justo cuando creí que estaba destinada a sufrir por la eternidad, volviste por mí."
+
+    ni "Pero deberías entender, ya no puedo estar aquí. Y no puedo estar más tiempo contigo…"
+
+    "¿ERES TÚ? ¿DE VERDAD ERES TÚ? {w=2} ¡No sabes cuánto te extrañé! ¿POR QUÉ ME ABANDONASTE?"
+
+    ni "Ha pasado de todo,  incluso ahora puedo entender lo que dices… Nunca te abandoné,  me obligaron a irme. Yo jamás me iría sin ti."
+
+    ni "Podría decir que solo tú me mantenías con vida.  Te extrañé tanto, pero no puedo estar contigo nuevamente."
+
+    "¡NO QUIERO! ¡QUIERO ESTAR CONTIGO POR SIEMPRE!, NO ME IMPORTA LO QUE TENGA QUE HACER, A DÓNDE DEBA IR O CON CUÁNTOS MONSTRUOS DEBA LIDIAR, NO QUIERO DEJARTE."
+
+    ni "Mírame bien, ahora no puedo pertenecer a este mundo…  Debo dejarte aquí y volver.  No queda mucho tiempo, si permanezco aquí no podré volver a verte, incluso si tú mueres, no podrías verme. Desaparecería para siempre."
+
+    "NO QUIERO QUE DESAPAREZCAS, QUIERO ESTAR CONTIGO POR LA ETERNIDAD"
+
+    show humana_muerta triste
+    with dissolve
+
+    pause(2)
+
+    ni "Yo no puedo ofrecerte una hermosa eternidad, has visto ese lugar. Lo que menos deseo es compartir dolor y sufrimiento contigo. Te adoro tanto, y te adoraré para siempre.  Pero no quiero decidir por tí así que dime algo…"
+
+    ni "¿Realmente me amas tanto?"
+
+    show humana_muerta regular
+    with dissolve
+
+    menu:
+
+        "ÁMAME PARA SIEMPRE,  JUSTO COMO YO LO HAGO":
+
+            jump finalvida
+
+        "TE AMARÉ Y TE ACOMPAÑARÉ PARA SIEMPRE":
+
+            jump finalmuerte
+
+label finalvida:
+
+    $ play_music(happy_music)
+
+    show humana_espiritu necklace
+    with dissolve
+
+    hide humana_muerta regular
     
     ni "LO HARÉ, JAMÁS DEJARÉ DE AMARTE… PROMETE QUE VIVIRÁS Y SERÁS FELIZ A PESAR DE TODO…"
 
@@ -656,4 +662,29 @@ label credits:
     pause(2)
 
     return 
+
+
+label finalabierto:
+
+    $ play_music(dangerous_music)
+    
+    $ play_music(happy_music)
+
+    "[ending_message]"
+
+    stop music fadeout 2.5
+
+    pause(1.5)
+
+    scene black
+    with dissolve
+
+    show text "FIN"
+    with dissolve
+    with Pause(1.5)
+
+    scene black
+    with dissolve
+
+    return
 
