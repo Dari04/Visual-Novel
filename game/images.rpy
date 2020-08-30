@@ -148,20 +148,14 @@ layeredimage humana_espiritu:
 
     yoffset -100
 
-layeredimage humana_muerta:
-
-    group option:
-
-        attribute regular default:
-            "humana_espiritu_collar"
-            zoom 0.5
-
-        attribute triste:
-            "humana_espiritu_collar_triste"
-            zoom 0.5
-
+image humana_muerta:
+    "humana_espiritu_collar"
+    zoom 0.5
     yoffset -100
 
+image humana_triste:
+    "humana_muerta_triste"
+    zoom 0.5
 
 layeredimage humana_fuego:
 

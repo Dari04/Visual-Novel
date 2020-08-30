@@ -581,7 +581,8 @@ label encuentro:
 
     "NO QUIERO QUE DESAPAREZCAS, QUIERO ESTAR CONTIGO POR LA ETERNIDAD"
 
-    show humana_muerta triste
+    hide humana_muerta
+    show humana_triste
     with dissolve
 
     pause(2)
@@ -594,7 +595,9 @@ label encuentro:
 
         "ÁMAME PARA SIEMPRE,  JUSTO COMO YO LO HAGO":
 
-            show humana_muerta regular
+            hide humana_triste
+   
+            show humana_muerta
             with dissolve
 
             jump finalvida
@@ -610,7 +613,7 @@ label finalvida:
     show humana_espiritu necklace
     with dissolve
 
-    hide humana_muerta regular
+    hide humana_muerta
     
     ni "LO HARÉ, JAMÁS DEJARÉ DE AMARTE… PROMETE QUE VIVIRÁS Y SERÁS FELIZ A PESAR DE TODO…"
 
@@ -658,7 +661,7 @@ label finalmuerte:
 
     "Lo único que importa es que estaremos juntos, como siempre."
 
-    hide humana_muerta triste
+    hide humana_triste
 
     show humana_fuego
     with dissolve
