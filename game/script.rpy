@@ -424,28 +424,28 @@ label lujuria:
 
     lu "¡HOLA CHIKIS!  ¿TE QUIERES DIVERTIR?  AQUÍ HAY ESPACIO PARA TI."
 
-    "…Qué desagradable… ¿Eres lo que creo que eres?"
+    "¡Hola! Ahora mismo no tengo tiempo para divertirme, estoy buscando a alguien a quien amo pero de repente desapareció"
 
-    lu "YO SOY UNO, AQUÍ NO HAY DISCRIMINACIÓN, SOLO LA DIVERSIÓN QUE TODOS DESEAN."
+    lu "¡¿Amor?! ¡Yo sé de eso! En mí vamos más allá del amor, todo lo que hacemos es darnos amor, amor y más amor… Tanto así que vamos al límite. ¡Hasta el placer!"
 
-    "Eso es repulsivo en muchos aspectos. Realmente este lugar es aterrador y tu presencia me desagrada muchísimo."
+    "¿Placer? ¿Eso es como sentirte feliz? Realmente no lo entiendo muy bien."
 
-    lu "¿QUÉ TE DESAGRADA? ¿ACASO NO SABES DE AMOR? DAR Y RECIBIR AMOR ES LO MÁXIMO."
+    lu "¡DAR Y RECIBIR AMOR ES LO MEJOR! Esto va más allá de pequeños toques, esto implica fusionarse con más y más seres llenos de deseo… ¿O acaso no sabes qué es este tipo de amor?"
 
     "¡Claro que sé de amor! Precisamente estoy buscando a alguien que me ama muchísimo y es alguien a quien yo amo en demasía."
+
+    lu "Entonces es probable que se haya unido a mí, yo tengo la capacidad de absorber todas las muestras de amor, y convertirlas en algo mejor… ¿te unirías a mí?  Te aseguro que te sentirás mejor."
 
     show lujuria mean at left
     with dissolve
 
-    lu "Es probable que se haya unido a mí, yo tengo la capacidad de absorber todas las muestras de amor, y convertirlas en algo mejor… ¿te unirías a mí?  Te aseguro que te sentirás mejor."
-
     menu:
 
-        "NO, ES REPULSIVO.":
+        "NO, NO CREO QUE SEA EL AMOR QUE BUSCO.":
 
             lu "¡TÚ TE LO PIERDES! NO ENCONTRARÁS UN MEJOR LUGAR QUE CONMIGO, TE LO ASEGURO. SOY MUCHO MEJOR QUE EL AMOR QUE TODOS PROFESAN, ¡YO SOY EL PLACER!"
 
-            lu " ADEMÁS, AQUELLA  NIÑA  QUE BUSCAS YA NO TIENE CAPACIDAD DE SENTIR, RECUERDA ESTO: NUNCA MÁS PODRÁ SENTIR UNA CARICIA, NI SIQUIERA TUYA."
+            lu "ADEMÁS, AQUELLA  NIÑA  QUE BUSCAS YA NO TIENE CAPACIDAD DE SENTIR, RECUERDA ESTO: NUNCA MÁS PODRÁ SENTIR UNA CARICIA, NI SIQUIERA TUYA."
 
             jump soberbia
 
@@ -497,7 +497,7 @@ label soberbia:
 
        "Buscaré mi propia verdad.":
 
-            so "Sólo los seres inferiores se atreven a ignorar mis consejos, retírate. "
+            so "Solo los seres inferiores se atreven a ignorar mis consejos, retírate. "
 
             jump maloso
 
