@@ -22,14 +22,6 @@ layeredimage gatita:
         attribute stopped:
             "gatita_brillo"
 
-image lantern:
-    "gatita_brillo" 
-    glowfloat()
-
-image glowing:
-    "gatita_fondo"
-    glow()
-
 image nena:
     "nena_en_cuarto" 
     resize(0.4)
@@ -98,6 +90,7 @@ layeredimage gula:
             zoom 0.5
     yoffset -100
 
+
 layeredimage finalBoss:
 
     group option:
@@ -123,11 +116,99 @@ image fb_mean:
     xoffset 100
     yoffset 50
     resize(0.5)  
+
+
+layeredimage humana_espiritu:
+
+    always:         
+        "glowing_background"
+
+    always:
+        "glowing_orbs"
+
+    group base:
+
+        attribute alone default:
+            "humana_espiritu_normal"
+            zoom 0.5
+
+        attribute necklace:
+            "humana_espiritu_collar"
+            zoom 0.5
+    group pendant:
+
+        attribute none default:
+            "transparent"
+
+        attribute on_hand:
+            "floating_necklace"
+            yoffset 560
+            xoffset 220
+
+
+    yoffset -100
+
+#items
+
+image floating_necklace:
+    "collar_item"
+    zoom 0.05 
+    soft_floating()
+
+layeredimage glowing_necklace:
+
+    always:         
+        "glowing_backlight"
+
+    always:
+        "collar_dije"
+
+    always:
+        "glowing_shimmer"
+
+    yoffset -150
+
+image glowing_shimmer:
+    "collar_luz_delante"
+    glow()
+
+image glowing_backlight:
+    "collar_luz_atras"
+    glowfloat()
+
+image glowing_background:
+    "humana_espiritu_fondo" 
+    zoom 0.5
+    glow()
+
+image glowing_orbs:
+    "humana_espiritu_brillo"
+    zoom 0.5
+    glowfloat()
+
+image lantern:
+    "gatita_brillo" 
+    glowfloat()
+
+image glowing:
+    "gatita_fondo"
+    glow()
+
+
 # ESCENARIOS
 
-image room:
-    "bg room"
-    resize(1.46)
+layeredimage room:
+    group option:
+
+        attribute regular default:
+            "bg room"
+            zoom 1.46
+
+        attribute gloom:
+            "bg room gloom"
+            zoom 1.46
+    xalign 0.5
+    yalign 1
   
 image alley:
     "bg alley"
