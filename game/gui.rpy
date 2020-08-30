@@ -23,7 +23,7 @@ init python:
 ## Los colores del texto de la interfaz
 
 ## El color enfatizado usado en la interfaz para subrayar texto.
-define gui.accent_color = '#9933ff'
+define gui.accent_color = '#FFFFFF'
 
 ## El color del botón de texto cuando no está seleccionado ni enfocado.
 define gui.idle_color = '#888888'
@@ -43,8 +43,8 @@ define gui.insensitive_color = '#8888887f'
 
 ## Colores de la parte vacía de las barras. No se usan directamente, sino en la
 ## regeneración de las imágenes de barra.
-define gui.muted_color = '#3d1466'
-define gui.hover_muted_color = '#5b1e99'
+define gui.muted_color = '#00bf4d'
+define gui.hover_muted_color = '#95f908'
 
 ## Colores del texto del diálogo y menú.
 define gui.text_color = '#ffffff'
