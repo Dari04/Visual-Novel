@@ -363,4 +363,7 @@ image ciudad:
 image parque:
     "bg park"
     yalign 0.2
-   
+
+image credits:
+    "bg credits"
+    yalign 0.2

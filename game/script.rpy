@@ -565,6 +565,8 @@ label maloso:
             jump encuentro
 
         "¿LA CONOCES? NECESITO VERLA, POR ÚLTIMA VEZ.":
+            show soberbia mean
+            with dissolve
 
             $ ending_message = "DEBES APRENDER A VIVIR POR TI Y NO POR ALGUIEN.  EXTRAÑAR A ALGUIEN QUE AMAS, SOLO TE ARRASTRA AL DOLOR."
             jump finalabierto
@@ -718,12 +720,11 @@ label finalmuerte:
 
 label credits:
 
-    show text "Ya puedes ver los créditos en “Acerca de“"
+    show text "Nuestro equipo"
 
-    pause(4)
-
-    scene black
+    scene bg credits
     with dissolve
+
 
     return 
 
