@@ -772,11 +772,15 @@ label finalmuerte:
 
 label credits:
 
-    show text "Nuestro equipo"
-
-    scene bg credits
+    scene credits
     with dissolve
 
+    show text "{b}Gracias por jugar{/b}\nPuedes encontrar los créditos en “Acerca de“"
+
+    pause(4)
+
+    scene black
+    with dissolve
 
     return 
 

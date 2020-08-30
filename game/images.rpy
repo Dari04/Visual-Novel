@@ -459,4 +459,5 @@ image carrusel:
 
 image credits:
     "bg credits"
-    yalign 0.2
+    zoom 1.50
+
