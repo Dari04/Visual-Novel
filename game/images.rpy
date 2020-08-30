@@ -147,25 +147,31 @@ layeredimage humana_espiritu:
 
 layeredimage lujuria:
 
-    #group background:
-
-        #attribute glow default:
-            #"lujuria_contenta_humo"
-
-        #attribute light:
-            #"lujuria_enojada_humo"
-
     group option:
 
         attribute regular default:
-            "lujuria_feliz"
+            "lujuria_happy"
             zoom 0.45
 
         attribute mean:
-            "lujuria_enojada"
+            "lujuria_mad"
             zoom 0.45
 
     yoffset -30
+
+layeredimage lujuria_happy:
+    always:
+        "glowing_smoke_purple"
+    always:
+        "lujuria_feliz"
+
+
+layeredimage lujuria_mad:
+    always:
+        "glowing_smoke_pink"
+    always:
+        "lujuria_enojada"
+    
 
 layeredimage soberbia:
 
@@ -239,7 +245,13 @@ image glowing:
     "gatita_fondo"
     glow()
 
+image glowing_smoke_pink:
+    "lujuria_enojada_humo"
+    glowfloat()
 
+image glowing_smoke_purple:
+    "lujuria_feliz_humo"
+    glowfloat()
 
 # ESCENARIOS
 

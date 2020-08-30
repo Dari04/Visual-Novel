@@ -368,7 +368,6 @@ label ira:
     ir "¿Vale la pena buscar a esa malagradecida? ¡Que se pudra esa maldita! ¡Olvídala!"
 
     show ira mean
-    with dissolve
 
     ir "Ven conmigo, te prometo que ella pagará por todo el daño que te hizo."
 
@@ -386,7 +385,7 @@ label ira:
 
         "¡SÍ! ¡Quiero vengarme!":
 
-            show ira
+            show ira regular
             with dissolve
 
             $ ending_message = "La ira te confiere un gran poder."
