@@ -652,12 +652,12 @@ label finalvida:
 
     stop music fadeout 2.5
 
-    pause(1.5)
+    pause(3)
+
+    $ save_finished("death")
  
     scene black
     with dissolve
-
-    $ save_finished("live")
 
     jump credits
 
@@ -691,19 +691,22 @@ label finalmuerte:
     stop music fadeout 2.5
 
     pause(3)
+
+    $ save_finished("death")
  
     scene black
     with dissolve
-
-    $ save_finished("death")
 
     jump credits
 
 label credits:
 
-    show text "Acá van los créditos"
+    show text "Ya puedes ver los créditos en “Acerca de“"
 
-    pause(2)
+    pause(4)
+
+    scene black
+    with dissolve
 
     return 
 
