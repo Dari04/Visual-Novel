@@ -772,12 +772,11 @@ label finalmuerte:
 
 label credits:
 
-    show text "Ya puedes ver los créditos en “Acerca de“"
+    show text "Nuestro equipo"
 
-    pause(4)
-
-    scene black
+    scene bg credits
     with dissolve
+
 
     return 
 
