@@ -64,7 +64,7 @@ label start:
 
     "Sin embargo, los he visto sonreír, llorar, dudar, amar y odiar… ¡Qué criaturas tan peculiares!"
 
-    "Pero entre todos los que he visto, solo hay alguien que me importa: mi dueña."
+    "Pero entre todos los que he visto, solo hay alguien que me importa: mi humana."
 
     show nena at center
     with dissolve
@@ -112,22 +112,22 @@ label perrito:
 
     pe " ¡Woof! No deberías estar aquí, tienes que irte."
 
-    "No puedo irme, no sé dónde está mi dueña y tengo que encontrarla."
+    "No puedo irme, no sé dónde está mi humana y tengo que encontrarla."
 
     show perrito mean
     with dissolve
 
-    pe "¿Tu dueña? Yo también tenía un dueño, pero se fue hace mucho, quería buscarlo, pero, me da miedo salir de aquí, waouh."
+    pe "¿Tu humana? Yo también tenía un dueño, pero se fue hace mucho, quería buscarlo, pero, me da miedo salir de aquí, waouh."
 
     show perrito at center
     with dissolve
 
-    "Pero si quieres encontrar a tu dueña, debió irse por esa calle, es la única vía que hay. Pero ten cuidado, he escuchado que, en ese camino, puedes olvidar fácilmente quién eres."
+    "Pero si quieres encontrar a tu humana, debió irse por esa calle, es la única vía que hay. Pero ten cuidado, he escuchado que, en ese camino, puedes olvidar fácilmente quién eres."
 
 
     menu:
 
-        "Aunque tenga miedo, quiero encontrar a mi dueña.":
+        "Aunque tenga miedo, quiero encontrar a mi humana.":
 
             call sadperrito from _call_sadperrito
             return
@@ -144,7 +144,7 @@ label sadperrito:
 
     $ play_music(happy_music, 1, 2)
 
-    pe sad "Espero que encuentres a tu dueña, quisiera ser tan valiente como tú…"
+    pe sad "Espero que encuentres a tu humana, quisiera ser tan valiente como tú…"
     with dissolve
 
     stop music fadeout 1
@@ -333,7 +333,7 @@ label gula:
 
     gu "Bueno, te lo pierdes, chomp, chomp, ¿y qué haces en un lugar como éste?… Chomp, chomp."
 
-    "Mmm, he estado buscando a mi dueña y no la encuentro por ningún lado…"
+    "Mmm, he estado buscando a mi humana y no la encuentro por ningún lado…"
 
     gu "¿¿Una amiga, eh??, Jejejeje, ¿al menos sabes que sitio es éste? Chomp, chomp… Qué bueno está ésto {b}{i}*tragar*{/i}{/b}."
 
@@ -377,9 +377,9 @@ label ira:
 
     ir "¡Largo de aquí, estúpida criatura!"
 
-    "Tranquilízate, no vengo a molestarte, solo estoy buscando a mi dueña. Ella desapareció y no tengo idea de dónde está. ¿La has visto? Ella usa un collar muy hermoso."
+    "Tranquilízate, no vengo a molestarte, solo estoy buscando a mi humana. Ella desapareció y no tengo idea de dónde está. ¿La has visto? Ella usa un collar muy hermoso."
 
-    ir "¡Ja! Vaya que eres tonto, ¿no te das cuenta? ¡Tu dueña te dejó! Todos lo hacen, te usan y te desechan. No pierdas el tiempo buscándola, ¡ella te hizo daño!"
+    ir "¡Ja! Vaya que eres tonto, ¿no te das cuenta? ¡Tu humana te dejó! Todos lo hacen, te usan y te desechan. No pierdas el tiempo buscándola, ¡ella te hizo daño!"
 
     "Ella no me hizo daño, pero, he enfrentado muchas cosas por buscarla, estoy tan cansado…"
 
@@ -487,7 +487,7 @@ label soberbia:
 
     so "¿Quién osa entrar a mis aposentos? ¿Tú? Una criatura tan inferior a mí…"
 
-    "Soy de la creencia de que todos somos iguales. Estoy buscando a mi dueña, ha desaparecido y no sé donde está. Pero me han dicho que tal vez cruzó por aquí."
+    "Soy de la creencia de que todos somos iguales. Estoy buscando a mi humana, ha desaparecido y no sé donde está. Pero me han dicho que tal vez cruzó por aquí."
 
     so "¿Iguales? Qué tontería… y nadie importante ha pasado por aquí, bueno, claro, sólo yo."
 
@@ -495,12 +495,12 @@ label soberbia:
 
     so "Eso dicen los mediocres, como tú, tontos que buscan a sus dueños. ¿Y qué van a hacer al encontrarlos? ¿Llevarse los huesos? ¡Jajaja! Los muertos nunca regresan."
 
-    "Mi dueña no está muerta."
+    "Mi humana no está muerta."
 
     show soberbia mean
     with dissolve
 
-    so "Si te crees esa mentira, no es mi problema, yo tengo la verdad. Me da igual, ya perdí mi valioso tiempo contigo. Te advierto, si continúas, jamás verás a tu dueña…"
+    so "Si te crees esa mentira, no es mi problema, yo tengo la verdad. Me da igual, ya perdí mi valioso tiempo contigo. Te advierto, si continúas, jamás verás a tu humana…"
 
     menu:
 
