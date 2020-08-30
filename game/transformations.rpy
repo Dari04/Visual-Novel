@@ -38,6 +38,12 @@ transform hovering:
         linear 30 yalign 0.1 clockwise circles 3
         repeat
 
+transform soft_hovering:
+    alignaround (0.5, 0.5)
+    block:
+        linear 130 xalign 0.03 clockwise circles 9
+        repeat
+
 transform soft_floating:
     pause(0.5)
     parallel:

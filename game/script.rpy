@@ -590,12 +590,12 @@ label encuentro:
 
     ni "¿Realmente me amas tanto?"
 
-    show humana_muerta regular
-    with dissolve
-
     menu:
 
         "ÁMAME PARA SIEMPRE,  JUSTO COMO YO LO HAGO":
+
+            show humana_muerta regular
+            with dissolve
 
             jump finalvida
 
@@ -652,9 +652,37 @@ label finalvida:
 
 label finalmuerte:
 
-    ni "charlamos un poco, y venís conmigo"
+    $ play_music(happy_music)
 
-    "Nos unimos en la muerte"
+    ni "¿Estás de acuerdo? Volveremos a aquellos lugares que cruzaste, aunque de ser posible encontraríamos algo mejor."
+
+    "Lo único que importa es que estaremos juntos, como siempre."
+
+    hide humana_muerta triste
+
+    show humana_fuego
+    with dissolve
+
+    ni "Tienes razón, nuestras almas siempre estuvieron juntas, incluso en la distancia."
+
+    ni "Una parte de mí habría querido que vivieras y disfrutaras de muchas mañanas cálidas, pero en el fondo, me alegra saber que te quedarás conmigo. Ya no tengo miedo de seguir caminando hacia la luz."
+
+    "Te quiero mucho."
+
+    ni "Yo también te quiero mucho, gracias por enfrentar a la oscuridad por mí."
+
+    show humana_fuego encendido
+
+    ni "Es momento de irnos, hay que seguir adelante."
+
+    window hide
+
+    stop music fadeout 2.5
+
+    pause(3)
+ 
+    scene black
+    with dissolve
 
     jump credits
 

@@ -119,9 +119,11 @@ layeredimage humana_espiritu:
 
     always:         
         "glowing_background"
+        zoom 0.5
 
     always:
         "glowing_orbs"
+        zoom 0.5
 
     group base:
 
@@ -159,7 +161,37 @@ layeredimage humana_muerta:
             zoom 0.5
 
     yoffset -100
-       
+
+
+layeredimage humana_fuego:
+
+    group option:
+
+        attribute regular default:
+            "humana_fuego_apagado"
+            zoom 0.5
+
+        attribute encendido:
+            "humana_fuego_encendido"
+            zoom 0.5
+
+    yoffset -100    
+    
+
+layeredimage humana_fuego_encendido:
+
+    always:         
+        "fire_cape"
+
+    always:
+        "humana_fuego_base"
+
+    always:
+        "flame"
+
+    always:
+        "sparkles"
+
 
 layeredimage lujuria:
 
@@ -245,12 +277,10 @@ image glowing_backlight:
 
 image glowing_background:
     "humana_espiritu_fondo" 
-    zoom 0.5
     glow()
 
 image glowing_orbs:
     "humana_espiritu_brillo"
-    zoom 0.5
     glowfloat()
 
 image lantern:
@@ -267,6 +297,18 @@ image glowing_smoke_pink:
 
 image glowing_smoke_purple:
     "lujuria_feliz_humo"
+    glowfloat()
+
+image fire_cape:
+    "humana_fuego_fondo"
+    glowfloat()
+
+image flame:
+    "humana_fuego_llama"
+    soft_floating()
+
+image sparkles:
+    "humana_fuego_chispas"
     glowfloat()
 
 # ESCENARIOS
