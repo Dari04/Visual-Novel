@@ -201,18 +201,19 @@ layeredimage lujuria:
 
     yoffset -30
 
+
 layeredimage lujuria_happy:
     always:
         "glowing_smoke_purple"
     always:
-        "lujuria_feliz"
+        im.Flip("lujuria_feliz.png", horizontal=True)
 
 
 layeredimage lujuria_mad:
     always:
         "glowing_smoke_pink"
     always:
-        "lujuria_enojada"
+        im.Flip("lujuria_enojada.png", horizontal=True)
     
 
 layeredimage soberbia:
@@ -286,11 +287,11 @@ image glowing:
     glow()
 
 image glowing_smoke_pink:
-    "lujuria_enojada_humo"
+    im.Flip("lujuria_enojada_humo.png", horizontal=True)
     glowfloat()
 
 image glowing_smoke_purple:
-    "lujuria_feliz_humo"
+    im.Flip("lujuria_feliz_humo.png", horizontal=True)
     glowfloat()
 
 image fire_cape:
