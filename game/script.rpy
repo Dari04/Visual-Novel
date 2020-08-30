@@ -1,4 +1,4 @@
-﻿# Characters 
+﻿# Characters
 
 define pe = Character("Un Perrito", image="perrito")
 define av = Character("Avaricia")
@@ -6,7 +6,7 @@ define ra = Character("Una Ratita")
 define en = Character("Envidia")
 define pz = Character("Pereza", image="pereza")
 define gu = Character("Gula", image="gula")
-define ir = Character("Ira")
+define ir = Character("Ira", image="ira")
 define ga = Character("Una Gatita")
 define lu = Character("Lujuria")
 define so = Character("Soberbia")
@@ -51,7 +51,7 @@ label start:
 
     play music happy_music fadein 1 fadeout 2
 
-    scene room 
+    scene room
     with dissolve
 
     "Los humanos son criaturas extrañas, las veo caminar velozmente en la calle, con una prisa que desconozco.  Como si no tuvieran tiempo para disfrutar."
@@ -108,16 +108,16 @@ label perrito:
 
 
     menu:
-    
+
         "Sí, quiero seguir camino":
 
             call sadperrito from _call_sadperrito
-            return 
+            return
 
         "mmmm no, mejor no":
 
             call sadperrito from _call_sadperrito_1
-            return 
+            return
 
 
 label sadperrito:
@@ -138,20 +138,20 @@ label sadperrito:
 
 label avaricia:
 
-# Escena 5 - Todo el contenido 
+# Escena 5 - Todo el contenido
 
     $ play_music(dangerous_music)
 
-    scene bank 
+    scene bank
     with dissolve
 
-    show avaricia 
+    show avaricia
     with dissolve
 
     pause(2)
 
     "¡Hola!, ¿puedo saber cómo consiguió ese collar?"
-    
+
     av "¿Y tú quién eres? ¿Te refieres a ésto? Acabo de comprarlo, ¿no crees que es bellísimo? JAJAJA-"
 
     "Sí que es bonito, pero no era lo que buscaba, se parece al collar que usa alguien que aprecio mucho."
@@ -167,7 +167,7 @@ label avaricia:
         "Tal vez tengas razón, ME IRÉ CONTIGO.":
 
             show avaricia mean
-            
+
             $ ending_message = "Soy la raíz de todos los problemas, jamás serás feliz."
             jump finalabierto
 
@@ -189,7 +189,7 @@ label ratita:
 # Escena 6 - Todo el contenido - No hay decisión
 
     $ play_music(dangerous_music)
-    
+
     ra "Soy una ratita"
 
     "le hablo un poquito"
@@ -201,16 +201,16 @@ label ratita:
 
 label envidia:
 
-# Escena 7 - Todo el contenido   
+# Escena 7 - Todo el contenido
 
     $ play_music(dangerous_music)
-    
-    scene bg antiques 
-    with dissolve 
+
+    scene bg antiques
+    with dissolve
 
     show envidia at right
     with dissolve
-    
+
     "¡Hola!, ¿podrías ayudarme? Estoy buscando a alguien sumamente importante para mí."
 
     en "¿QUIÉN ERES TÚ? ¿Acaso sabes dónde te has metido?..."
@@ -234,7 +234,7 @@ label envidia:
             show envidia mean
             with dissolve
 
-            "Yo espero que puedas preocuparte por tí y no por los demás. Busca la paz en tí mismo y no odies a  aquellos con los que te encuentras." 
+            "Yo espero que puedas preocuparte por tí y no por los demás. Busca la paz en tí mismo y no odies a  aquellos con los que te encuentras."
 
             jump pereza
 
@@ -242,22 +242,22 @@ label envidia:
 
             show envidia mean
             with dissolve
-        
+
             $ ending_message = "Alguien como yo, nunca permitiría que pudieras ser feliz."
             jump finalabierto
 
 label pereza:
 
-# Escena 8 - Todo el contenido    
+# Escena 8 - Todo el contenido
 
     $ play_music(dangerous_music)
-    
-    scene tracks 
+
+    scene tracks
     with dissolve
 
     show pereza at right
     with dissolve
-    
+
     "D-Disculpe."
 
     pz "Hmmm... ¿qué quieres?"
@@ -270,7 +270,7 @@ label pereza:
 
     show pereza yawn at right
     with dissolve
-  
+
     pz "No te canses buscándola, quédate conmigo y descansa… puedes verla en sueños si gustas… Zzzzz…"
 
     show pereza at right
@@ -282,33 +282,33 @@ label pereza:
 
             show pereza tired at right
             with dissolve
-           
+
             "Si descanso ahora, tal vez no me despierte más y me encierre en un mundo de sueños…"
 
             jump gula
 
         "Solo dormiré un poco, no será malo.":
-        
+
             show pereza tired at right
             with dissolve
-       
+
             $ ending_message = "“Tus metas pueden esperar, dormir no hace daño a nadie”\nAtte: Pereza"
             jump finalabierto
 
 label gula:
 
-# Escena 9 - Todo el contenido    
+# Escena 9 - Todo el contenido
 
     $ play_music(dangerous_music)
-    
-    scene garbage 
+
+    scene garbage
     with dissolve
 
     show gula
     with dissolve
 
     $ play_eating_sounds()
-    
+
     gu "Chomp, chomp {b}{i}*sonido grotesco al masticar*{/i}{/b} Hola pequeñín, ¿gustas un trozo de pollo? Es una delicia, jeejejeje."
 
     "N-No gracias ugh…"
@@ -336,9 +336,8 @@ label gula:
 
         "Mmm…"
 
-        "Está bien, a lo mejor ella está allí…": 
+        "Está bien, a lo mejor ella está allí…":
 
-        
             $ ending_message = "Una vida sencilla es mejor a una con excesos…"
             jump finalabierto
 
@@ -348,38 +347,58 @@ label gula:
 
 label ira:
 
-# Escena 10 - Todo el contenido    
-  
+# Escena 10 - Todo el contenido
+
     $ play_music(dangerous_music)
-      
-    ir "yo soy mala onda"
+
+    scene tunel
+    with dissolve
+
+    show ira
+    with dissolve
+
+    ir "¡Largo de aquí, estúpida criatura!"
+
+    " Tranquilízate, no vengo a molestarte, sólo estoy buscando a mi dueña. Ella desapareció y no tengo idea de dónde está. ¿La has visto? Ella usa un collar muy hermoso."
+
+    ir " ¡Ja! Vaya que eres tonto, ¿no te das cuenta? ¡Tu dueña te dejo! Todos lo hacen, te usan y te desechan. No pierdas el tiempo buscándola, ¡ella te hizo daño!"
+
+    "Ella no me hizo daño, pero, he enfrentado muchas cosas por buscarla, estoy tan cansado…"
+
+    ir "¿Vale la pena buscar a esa malagradecida? ¡Que se pudra esa maldita! ¡Olvídala!"
+
+    show ira mean
+    with dissolve
+
+    ir "Ven conmigo, te prometo que ella pagará por todo el daño que te hizo."
 
     menu:
 
-        "Pienso un rato y le respondo"
+        "No voy a abandonarla, aunque ella lo haya hecho.":
 
-        "Sí, quiero seguir camino":
+           # Conectar nuevamente cuando Iteración 2 se realice
+           #jump gatita
+           jump lujuria
 
-            ir "Te digo un par de cosas más"
+        "¡SÍ! ¡Quiero vengarme!":
 
- # Conectar nuevamente cuando Iteración 2 se realice
-            #jump gatita
-            jump lujuria
+           ir "¡Idiota! ¡Te arrepentirás de tu decisión!"
 
-        "mmmm no, mejor no":
-        
-        
-            $ ending_message = "Mensaje del personaje"
-            jump finalabierto
+           show ira
+           with dissolve
+
+           $ ending_message = "La ira te confiere un gran poder."
+           jump finalabierto
+
 
 label gatita:
 
-# Escena 11 - Todo el contenido    
+# Escena 11 - Todo el contenido
 
     $ play_music(dangerous_music)
-    
+
     show gatita at adjustedleft(0.25)
-    
+
     ga "Hola, yo soy una gatita"
 
     "ok, me pareció"
@@ -391,62 +410,102 @@ label gatita:
 
 label lujuria:
 
-# Escena 12 - Todo el contenido    
+# Escena 12 - Todo el contenido
 
     $ play_music(dangerous_music)
-        
-    lu "Hola soy Lujuria"
 
-    "ok, como anda todo che"
+    scene callejon
+    with dissolve
+
+    show lujuria
+    with dissolve
+
+    lu "¡HOLA CHIKIS!  ¿TE QUIERES DIVERTIR?  AQUÍ HAY ESPACIO PARA TI."
+
+    "...Qué desagradable… ¿Eres lo que creo que eres?"
+
+    lu "YO SOY UNO, AQUÍ NO HAY DISCRIMINACIÓN, SÓLO LA DIVERSIÓN QUE TODOS DESEAN."
+
+    "Eso es repulsivo en muchos aspectos. Realmente este lugar es aterrador y tu presencia me desagrada muchísimo."
+
+    lu "¿QUÉ TE DESAGRADA? ¿ACASO NO SABES DE AMOR? DAR Y RECIBIR AMOR ES LO MÁXIMO."
+
+    " ¡Claro que sé de amor! Precisamente estoy buscando a alguien que me ama muchísimo y es alguien a quien yo amo en demasía. "
+
+    show lujuria mean
+    with dissolve
+
+    lu "Es probable que se haya unido a mí, yo tengo la capacidad de absorber todas las muestras de amor, y convertirlas en algo mejor… ¿te unirías a mí?  Te aseguro que te sentirás mejor."
 
     menu:
 
-        "Pienso un rato y le respondo"
+        "NO, ES REPULSIVO.":
 
-        "Sí, quiero seguir camino":
+            lu "¡TÚ TE LO PIERDES! NO ENCONTRARÁS UN MEJOR LUGAR QUE CONMIGO, TE LO ASEGURO. SOY MUCHO MEJOR QUE EL AMOR QUE TODOS PROFESAN, ¡YO SOY EL PLACER!"
 
-            lu "Me dice más cosas"
+            lu " ADEMÁS, AQUELLA  NIÑA  QUE BUSCAS YA NO TIENE CAPACIDAD DE SENTIR,  RECUERDA ESTO: NUNCA MÁS PODRÁ SENTIR UNA CARICIA, NI SIQUIERA TUYA."
 
             jump soberbia
 
-        "mmmm no, mejor no":
-        
-            $ ending_message = "Mensaje del personaje"
+        "Sólo iré si ella está ahí…":
+
+            $ ending_message = "A los sentimientos del alma, el  cuerpo escucha, y se olvida..."
             jump finalabierto
 
 label soberbia:
 
-# Escena 13 - Todo el contenido   
- 
+# Escena 13 - Todo el contenido
+
 
     $ play_music(dangerous_music)
-       
-    so "Soy Soberbia"
 
-    "Ajá"
+    scene ciudad
+    with dissolve
 
-    so "Soy la mejor, te quedás"
+    show soberbia at right
+    with dissolve
+
+    so "¿Quién osa entrar a mis aposentos? ¿Tú? Una criatura tan inferior a mí…"
+
+    "Soy de la creencia de que todos somos iguales. Estoy buscando a mi dueña, ha desaparecido y no sé donde está. Pero me han dicho que tal vez cruzó por aquí."
+
+    so " ¿Iguales? Qué tontería… y nadie importante ha pasado por aquí, bueno, claro, sólo yo."
+
+    "Que arrogante eres."
+
+    so "Eso dicen los mediocres, como tú, tontos que buscan a sus dueños. ¿Y qué van a hacer al encontrarlos? ¿Llevarse los huesos? ¡Jajaja! Los muertos nunca regresan."
+
+    "Mi dueña no está muerta."
+
+    show soberbia mean
+    with dissolve
+
+    so "Si te crees esa mentira, no es mi problema, yo tengo la verdad. Me da igual, ya perdí mi valioso tiempo contigo. Te advierto, si continúas, jamás verás a tu dueña…"
 
     menu:
 
-        "No, quiero seguir camino":
+       "Si es verdad lo que dices, entonces, me quedaré contigo.":
 
-            so "siempre tengo razón"
+            show soberbia 
+            with dissolve
+
+            $ ending_message = "La soberbia somete a la naturaleza a su voluntad"
+            jump finalabierto
+
+       "Buscaré mi propia verdad.":
+
+            so "Sólo los seres inferiores se atreven a ignorar mis consejos, retírate. "
 
             jump maloso
 
-        "mmmm no, mejor no":
-        
-            $ ending_message = "Mensaje del personaje"
-            jump finalabierto
 
 label maloso:
 
-# Escena 14 - Todo el contenido  
+# Escena 14 - Todo el contenido
 
 
     $ play_music(dangerous_music)
-    
+
 
     fb "Soy el maloso final, tengamos una linda charla"
 
@@ -459,20 +518,20 @@ label maloso:
             jump encuentro
 
         "Ma sí matame":
-        
+
             $ ending_message = "Mensaje del personaje"
             jump finalabierto
 
 label encuentro:
 
- # Escena 15 - Todo el contenido   
- 
+ # Escena 15 - Todo el contenido
+
 
     $ play_music(happy_music)
-    
+
     ni "hola, llegaste"
 
-    "parece" 
+    "parece"
 
     menu:
 
@@ -481,20 +540,20 @@ label encuentro:
             jump finalvida
 
         "Te querré":
-          
+
             jump finalmuerte
 
 
 label finalabierto:
 
     $ play_music(happy_music)
-    
+
     "[ending_message]"
 
     stop music fadeout 2.5
 
     pause(1.5)
- 
+
     scene black
     with dissolve
 
@@ -510,7 +569,7 @@ label finalabierto:
 label finalvida:
 
     $ play_music(happy_music)
-    
+
     ni "charlamos un poco, pero te digo chau"
 
     "Vuelvo a la vida"
@@ -526,8 +585,3 @@ label finalmuerte:
     "Nos unimos en la muerte"
 
     return
-
-
-
-
-
