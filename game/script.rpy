@@ -435,9 +435,7 @@ label ira:
 
             ir "Sal de mi vista…"
 
-            # Conectar nuevamente cuando Iteración 2 se realice
-            #jump gatita
-            jump lujuria
+            jump gatita
 
         "¡SÍ! ¡Quiero vengarme!":
 
@@ -454,13 +452,31 @@ label gatita:
 
     $ play_music(chill_music, 1, 5)
 
+    scene carrusel
+    with dissolve
+
     show gatita at adjustedleft(0.25)
 
-    ga "Hola, yo soy una gatita"
+    ga "Miau, hace mucho que no veo a alguien por estos lares. Si has llegado hasta aquí es porque eres muy valiente o muy tonto."
 
-    "ok, me pareció"
+    "Quiero ver a mi humana, puedo sentirla muy cerca, veo su collar en todos lados"
 
-    ga "hablo un poco más"
+    ga "Aferrarse a un valioso recuerdo es lo mejor que puedes hacer, más si te has enfrentado a esas criaturas."
+
+    ga "Si tu humana está recorriendo este camino, está en graves problemas. Mejor apresúrate, no creo que resista más."
+
+    "¿A dónde debo dirigirme?"
+
+    ga "Solo queda adelante, ya no puedes regresar."
+
+    ga "Qué pena, me caes bien, pero te perderás como los demás, siempre ocurre. Miau, ¿pagarás el precio por proteger lo que amas? Me da curiosidad."
+
+    "Ten cuidado, ya sabes lo que dicen, la curiosidad mató al gato."
+
+    ga "Yo, ya no tengo ese problema."
+
+    scene black
+    with dissolve
 
     jump lujuria
 

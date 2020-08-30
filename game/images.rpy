@@ -452,3 +452,8 @@ image subte:
     zoom 1.35
     yoffset 200
 
+image carrusel:
+    "bg carrusel"
+    resize(1.5)
+
+
