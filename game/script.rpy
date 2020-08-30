@@ -487,7 +487,7 @@ label encuentro:
 
 label finalabierto:
 
-    $ play_music(happy_music)
+    $ play_music(dangerous_music)
     
     "[ending_message]"
 
@@ -510,14 +510,49 @@ label finalabierto:
 label finalvida:
 
     $ play_music(happy_music)
+
+    scene room gloom
+    with dissolve
+
+    show humana_espiritu necklace 
     
-    ni "charlamos un poco, pero te digo chau"
+    ni "LO HARÉ, JAMÁS DEJARÉ DE AMARTE… PROMETE QUE VIVIRÁS Y SERÁS FELIZ A PESAR DE TODO…"
 
-    "Vuelvo a la vida"
+    "YO… LO PROMETO,  aunque no sé si tenga las fuerzas suficientes para hacerlo…"
 
-    na "esto es lo que aprendiste - FIN"
+    ni "SE QUE PODRÁS, PORQUE SIEMPRE ESTARÉ CONTIGO…"
 
-    return
+    show humana_espiritu alone on_hand
+    with dissolve
+
+    ni "ESTE COLLAR ES LA PRUEBA DE ELLO… mira este collar cuando te sientas solo y triste."
+
+    ni "Recuerda que yo estaré contigo aunque no me puedas ver, juntos venceremos cada obstáculo como lo hicimos hasta ahora…"
+
+    "¡GRACIAS! LO ATESORARÉ POR SIEMPRE… JAMÁS TE OLVIDARÉ… ¡¡¡JAMÁS!!!"
+
+    ni "Lo sé… sé que serás feliz… debes seguir tu camino, apresúrate antes de que sea tarde."
+
+    scene room regular
+    with dissolve
+
+    show glowing_necklace at resize(0.5) 
+    with dissolve
+
+    "Ese día aprendí que aunque no la vuelva a ver jamás... ella siempre vivirá en mi corazón y con este collar, ella estará conmigo siempre que me sienta solo…"
+
+    "Los años pasaron y como lo había prometido continué mi vida, disfrutando cada momento, superando cada obstáculo,  sabía que ella estaría siempre ahí, para mí."
+
+    window hide
+
+    stop music fadeout 2.5
+
+    pause(1.5)
+ 
+    scene black
+    with dissolve
+
+    jump credits
 
 label finalmuerte:
 
@@ -525,9 +560,14 @@ label finalmuerte:
 
     "Nos unimos en la muerte"
 
-    return
+    jump credits
 
+label credits:
 
+    show text "Acá van los créditos"
 
+    pause(2)
+
+    return 
 
 
