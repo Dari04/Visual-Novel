@@ -21,13 +21,20 @@ layeredimage gatita:
         attribute stopped:
             "gatita_brillo"
 
-image lantern:
-    "gatita_brillo"
-    glowfloat()
+layeredimage perrito:
 
-image glowing:
-    "gatita_fondo"
-    glow()
+    group option:
+
+        attribute regular default:
+            "perrito_feliz"
+            zoom 0.3
+
+        attribute mean:
+            "perrito_sad"
+            zoom 0.3
+
+    yoffset -40
+
 
 image nena:
     "nena_en_cuarto"
@@ -97,39 +104,131 @@ layeredimage gula:
             zoom 0.5
     yoffset -100
 
-layeredimage ira:
+
+layeredimage finalBoss:
 
     group option:
 
         attribute regular default:
-            "ira_uno"
+            "fb_final"
             zoom 0.5
 
         attribute mean:
-            "ira_dos"
+            "fb_inicial"
             zoom 0.5
-    yoffset 100
+
+image fb_regular:
+    "fb_final"
+    xoffset 100
+    yoffset 50
+    resize(0.5)
+
+image fb_mean:
+    "fb_inicial"
+    xoffset 100
+    yoffset 50
+    resize(0.5)
+
+
+layeredimage humana_espiritu:
+
+    always:
+        "glowing_background"
+        zoom 0.5
+
+    always:
+        "glowing_orbs"
+        zoom 0.5
+
+    group base:
+
+        attribute alone default:
+            "humana_espiritu_normal"
+            zoom 0.5
+
+        attribute necklace:
+            "humana_espiritu_collar"
+            zoom 0.5
+
+    group pendant:
+
+        attribute none default:
+            "transparent"
+
+        attribute on_hand:
+            "floating_necklace"
+            yoffset 560
+            xoffset 220
+
+
+    yoffset -100
+
+image humana_muerta:
+    "humana_espiritu_collar"
+    zoom 0.5
+    yoffset -100
+
+image humana_triste:
+    "humana_muerta_triste"
+    zoom 0.5
+
+layeredimage humana_fuego:
+
+    group option:
+
+        attribute regular default:
+            "humana_fuego_apagado"
+            zoom 0.5
+
+        attribute encendido:
+            "humana_fuego_encendido"
+            zoom 0.5
+
+    yoffset -100
+
+
+layeredimage humana_fuego_encendido:
+
+    always:
+        "fire_cape"
+
+    always:
+        "humana_fuego_base"
+
+    always:
+        "flame"
+
+    always:
+        "sparkles"
+
 
 layeredimage lujuria:
 
-    #group background:
-
-        #attribute glow default:
-            #"lujuria_contenta_humo"
-
-        #attribute light:
-            #"lujuria_enojada_humo"
-
     group option:
 
         attribute regular default:
-            "lujuria_feliz"
-            zoom 0.5
+            "lujuria_happy"
+            zoom 0.45
 
         attribute mean:
-            "lujuria_enojada"
-            zoom 0.5
-    yoffset 100
+            "lujuria_mad"
+            zoom 0.45
+
+    yoffset -30
+
+layeredimage lujuria_happy:
+    always:
+        "glowing_smoke_purple"
+    always:
+        "lujuria_feliz"
+
+
+layeredimage lujuria_mad:
+    always:
+        "glowing_smoke_pink"
+    always:
+        "lujuria_enojada"
+
 
 layeredimage soberbia:
 
@@ -142,14 +241,99 @@ layeredimage soberbia:
         attribute mean:
             "soberbia_dos"
             zoom 0.9
+    xoffset 200
+
+
+layeredimage ira:
+    group option:
+
+        attribute regular default:
+            "ira_uno"
+            zoom 0.5
+
+        attribute mean:
+            "ira_dos"
+            zoom 0.5
     yoffset 100
 
+# ITEMS
+
+image floating_necklace:
+    "collar_item"
+    zoom 0.05
+    soft_floating()
+
+layeredimage glowing_necklace:
+
+    always:
+        "glowing_backlight"
+
+    always:
+        "collar_dije"
+
+    always:
+        "glowing_shimmer"
+
+    yoffset -150
+
+image glowing_shimmer:
+    "collar_luz_delante"
+    glow()
+
+image glowing_backlight:
+    "collar_luz_atras"
+    glowfloat()
+
+image glowing_background:
+    "humana_espiritu_fondo"
+    glow()
+
+image glowing_orbs:
+    "humana_espiritu_brillo"
+    glowfloat()
+
+image lantern:
+    "gatita_brillo"
+    glowfloat()
+
+image glowing:
+    "gatita_fondo"
+    glow()
+
+image glowing_smoke_pink:
+    "lujuria_enojada_humo"
+    glowfloat()
+
+image glowing_smoke_purple:
+    "lujuria_feliz_humo"
+    glowfloat()
+
+image fire_cape:
+    "humana_fuego_fondo"
+    glowfloat()
+
+image flame:
+    "humana_fuego_llama"
+    soft_floating()
+
+image sparkles:
+    "humana_fuego_chispas"
+    glowfloat()
 
 # ESCENARIOS
 
-image room:
-    "bg room"
-    resize(1.46)
+layeredimage room:
+    group option:
+
+        attribute regular default:
+            "bg room"
+            zoom 1.46
+
+        attribute gloom:
+            "bg room gloom"
+            zoom 1.46
+    xalign 0.5
+    yalign 1
 
 image alley:
     "bg alley"
@@ -167,14 +351,19 @@ image tracks:
     "bg tracks"
     resize(0.55)
 
+image hell:
+    "bg finalboss"
+    resize(1.60)
+
 image tunel:
     "bg tunel"
     resize(1.40)
 
 image callejon:
     "bg callejon"
-    resize(3.4)
+    yalign 0.5
+    zoom 2.7
 
 image ciudad:
     "bg ciudad"
-    resize(3.2)
+    resize(1.9)

@@ -23,16 +23,16 @@ init python:
 ## Los colores del texto de la interfaz
 
 ## El color enfatizado usado en la interfaz para subrayar texto.
-define gui.accent_color = '#9933ff'
+define gui.accent_color = '#78fbe1'
 
 ## El color del botón de texto cuando no está seleccionado ni enfocado.
 define gui.idle_color = '#888888'
 
 ## El color 'small' se usa para el texto pequeño, que necesita destacar más.
-define gui.idle_small_color = '#aaaaaa'
+define gui.idle_small_color = '#ffffff'
 
 ## El color usado en botones y barras que ganan foco.
-define gui.hover_color = '#c184ff'
+define gui.hover_color = '#148c7e'
 
 ## El color del botón de texto seleccionado pero no enfocado. Un botón está
 ## seleccionado si indica el valor actual de la pantalla o preferencia.
@@ -43,8 +43,8 @@ define gui.insensitive_color = '#8888887f'
 
 ## Colores de la parte vacía de las barras. No se usan directamente, sino en la
 ## regeneración de las imágenes de barra.
-define gui.muted_color = '#3d1466'
-define gui.hover_muted_color = '#5b1e99'
+define gui.muted_color = '#f54da2'
+define gui.hover_muted_color = '#69055b'
 
 ## Colores del texto del diálogo y menú.
 define gui.text_color = '#ffffff'
@@ -105,7 +105,7 @@ define gui.textbox_yalign = 1.0
 ## Puede ser el númerode píxels desde la esquina superior izquierda, o 0.5 para
 ## centrar.
 define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_ypos = -80
 
 ## La alineación horizontal del nombre del personaje. (0.0 es izquierda, 0.5 es
 ## centro, 1.0 es derecha).
@@ -118,7 +118,7 @@ define gui.namebox_height = None
 
 ## Los bordes de la caja que contiene el nombre del personaje, en orden:
 ## izquierda, arriba, derecha, abajo.
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(40, 10, 40, 10)
 
 ## Si es 'True, el fondo de la caja del nombre será en mosaico, si es 'False',
 ## el fondo, si la caja del nombre es escalada.
