@@ -24,14 +24,88 @@ define gui.show_name = False
 
 ## Versión del juego.
 
-define config.version = "0.5"
+define config.version = "0.6"
 
 
 ## Texto situado en la pantalla 'Acerca de' del juego. Sitúa el texto entre
 ## comillas triples y deja una línea en blanco entre párrafos.
 
-define gui.about = _p("""
+define gui.full_credits = _p("""
+Juego realizado para Women Game Jam 2020
+
+"Juntas a la distancia"
+
+
+Project Manager: Viviana Jerónimo  “Insecta”
+
+
+Arte y Diseño:
+
+Rocío Mikulic
+
+Karina Fonseca “Hedoneex”  
+
+Sol Savoretti 
+
+Elizabeth Rodríguez 
+
+Viviana Jerónimo  “Insecta”
+
+
+Storytelling:
+
+Berenice Prieto “JasChido” 
+
+Vanessa Flores “ Vavin”
+
+Viviana Jerónimo  “Insecta”
+
+
+Tejedoras de Código:
+
+May Craviotto 
+
+Marina "Eariel" Cuello 
+
+Dari Patiño
+
+@Alison
+
+
+Ambientación musical:
+
+Ángel Castro  
+
+Sascha Ram  
+
+
+Efectos de sonidos 
+
+bbrocer (en FreeSound bajo CC0 1.0 Universal (CC0 1.0) Public Domain Dedication)
+
+Ariel
 """)
+
+define gui.basic_credits = _p("""
+Juego realizado para Women Game Jam 2020
+
+"Juntas a la distancia"
+
+
+Efectos de sonidos 
+
+bbrocer (en FreeSound bajo CC0 1.0 Universal (CC0 1.0) Public Domain Dedication)
+
+Ariel
+""")
+
+$ current_ending = renpy.persistent.ending
+
+if  current_ending is None:
+    define gui.about = gui.basic_credits
+else:
+    define gui.about = gui.full_credits
+
 
 
 ## Nombre breve del juego para ejecutables y directorios en la distribución.
@@ -47,7 +121,7 @@ define build.name = "WGJ2020Moksha"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## Para permitir al usuario probar el volumen de los canales de sonido o voz,
@@ -105,7 +179,7 @@ define config.end_game_transition = None
 ## Una vez comenzado el juego, esto se puede ajustar con las sentencias "window
 ## show", "window hide", y "window auto".
 
-define config.window = "auto"
+define config.window = "hide"
 
 
 ## Transiciones usadas para mostrar o esconder la ventana de diálogo
@@ -209,4 +283,4 @@ init python:
 ## Los nombres de usuario y de proyecto asociados con un proyecto itch.io,
 ## separados por una barra.
 
-# define build.itch_project = "renpytom/test-project"
+define build.itch_project = "alfabuenamarvilla/wgj-2020-wip"
