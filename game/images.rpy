@@ -98,6 +98,31 @@ layeredimage gula:
             zoom 0.5
     yoffset -100
 
+layeredimage finalBoss:
+
+    group option:
+
+        attribute regular default:
+            "fb_final"
+            zoom 0.5
+
+        attribute mean:
+            "fb_inicial"
+            zoom 0.5
+
+    #yoffset -100
+
+image fb_regular:
+    "fb_final" 
+    xoffset 100
+    yoffset 50
+    resize(0.5)
+
+image fb_mean:
+    "fb_inicial" 
+    xoffset 100
+    yoffset 50
+    resize(0.5)  
 # ESCENARIOS
 
 image room:
@@ -118,5 +143,9 @@ image bank:
 
 image tracks:
     "bg tracks"
-    resize(0.55)    
+    resize(0.55)
+
+image hell:
+    "bg finalboss"
+    resize(1.60)
          
